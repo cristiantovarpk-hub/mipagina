@@ -2069,7 +2069,94 @@ Solo mayores de 18 años
 <a class="whatsapp" href="https://wa.me/573507305584">
 💬
 </a>
+<script>
+(function () {
+  const WA_NUMBER = "573507305584";
 
+  function parsePriceToNumber(txt) {
+    if (!txt) return 0;
+    // Ej: "$59.900" -> 59900
+    const cleaned = String(txt).replace(/[^\d]/g, '');
+    const n = parseInt(cleaned || '0', 10);
+    return Number.isFinite(n) ? n : 0;
+  }
+
+  function safeText(txt) {
+    return String(txt || '').trim();
+  }
+
+  function buildBtn(label, onClick, className) {
+    const b = document.createElement('button');
+    b.type = "button";
+    b.className = className || "";
+    b.textContent = label;
+    b.addEventListener('click', onClick);
+    return b;
+  }
+
+  function addActionsToCards() {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      // Evitar duplicar si ya se añadieron
+      if (card.querySelector('[data-auto-actions="1"]')) return;
+
+      const nameEl = card.querySelector('h3');
+      const priceEl = card.querySelector('.price');
+      const name = safeText(nameEl ? nameEl.textContent : '');
+      const price = parsePriceToNumber(priceEl ? priceEl.textContent : '');
+
+      if (!name) return;
+
+      // Contenedor de acciones
+      const actions = document.createElement('div');
+      actions.dataset.autoActions = "1";
+
+      actions.style.marginTop = "12px";
+
+      // Botón Agregar
+      const btnAdd = buildBtn(
+        "🛒 Agregar al carrito",
+        () => {
+          // usa tu función existente
+          if (typeof agregarCarrito === 'function') {
+            agregarCarrito(name, price);
+          } else {
+            alert("La función agregarCarrito no está definida.");
+          }
+        },
+        ""
+      );
+
+      // Botón Comprar ahora (WhatsApp)
+      const btnBuy = buildBtn(
+        "⚡ Comprar ahora",
+        () => {
+          const msg =
+            `Hola, quiero el: ${name}` +
+            (price > 0 ? ` - $${price.toLocaleString('es-CO')}` : '') +
+            `%0A%0AEntrega discreta - Cali`;
+
+          window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, "_blank");
+        },
+        ""
+      );
+
+      // Alineación: por defecto apilado; si luego me dices O2 lo ajusto
+      actions.appendChild(btnAdd);
+      actions.appendChild(btnBuy);
+
+      card.appendChild(actions);
+    });
+  }
+
+  // Espera DOM listo
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", addActionsToCards);
+  } else {
+    addActionsToCards();
+  }
+})();
+</script>
 </body>
 
 </html>  
