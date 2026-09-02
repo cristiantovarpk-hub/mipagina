@@ -299,20 +299,131 @@ transform:scale(1);
 
  <script>
 
-let carrito=[];
+```html
+<script>
+/* =========================
+   CARRITO
+========================= */
 
-function agregarCarrito(nombre,precio){
+let carrito = [];
 
-carrito.push({
-nombre:nombre,
-precio:precio
-});
+function agregarCarrito(nombre, precio) {
 
-document.getElementById("contador").innerText=carrito.length;
+  carrito.push({
+    nombre: nombre,
+    precio: precio
+  });
 
+  document.getElementById("contador").innerText = carrito.length;
+
+  alert("✅ " + nombre + " fue agregado al carrito");
 }
 
-function abrirCarrito(){
+
+function abrirCarrito() {
+
+  if (carrito.length === 0) {
+    alert("🛒 Tu carrito está vacío");
+    return;
+  }
+
+  let total = 0;
+
+  let productos = carrito.map(function(item) {
+
+    total += item.precio;
+
+    return "• " + item.nombre +
+           " - $" +
+           item.precio.toLocaleString("es-CO");
+
+  });
+
+  let mensaje =
+    "Hola, quiero hacer este pedido:\n\n" +
+    productos.join("\n") +
+    "\n\n💰 Total: $" +
+    total.toLocaleString("es-CO");
+
+  window.open(
+    "https://wa.me/573507305584?text=" +
+    encodeURIComponent(mensaje),
+    "_blank"
+  );
+}
+
+
+/* =========================
+   CONVERTIR AUTOMÁTICAMENTE
+   LOS ANTIGUOS "PEDIR AHORA"
+   EN BOTONES DEL CARRITO
+========================= */
+
+function convertirBotonesCarrito() {
+
+  const tarjetas = document.querySelectorAll(".card");
+
+  tarjetas.forEach(function(card) {
+
+    const enlace = card.querySelector('a[href*="wa.me"]');
+
+    if (!enlace) return;
+
+    const boton = enlace.querySelector("button");
+
+    if (!boton) return;
+
+    const textoBoton = boton.innerText.trim().toLowerCase();
+
+    if (!textoBoton.includes("pedir ahora")) return;
+
+    /* Obtener nombre del producto */
+    const titulo = card.querySelector("h3");
+
+    if (!titulo) return;
+
+    const nombre = titulo.innerText.trim();
+
+    /* Obtener precio de venta */
+    const precioElemento = card.querySelector(".price");
+
+    if (!precioElemento) return;
+
+    let precioTexto = precioElemento.innerText;
+
+    /* Quitar $, puntos, espacios y otros caracteres */
+    precioTexto = precioTexto.replace(/[^\d]/g, "");
+
+    const precio = parseInt(precioTexto, 10);
+
+    if (isNaN(precio) || precio <= 0) return;
+
+    /* Crear nuevo botón */
+    const nuevoBoton = document.createElement("button");
+
+    nuevoBoton.type = "button";
+    nuevoBoton.innerText = "🛒 Agregar al carrito";
+
+    nuevoBoton.onclick = function() {
+      agregarCarrito(nombre, precio);
+    };
+
+    /* Reemplazar enlace completo */
+    enlace.replaceWith(nuevoBoton);
+
+  });
+}
+
+
+/* Ejecutar cuando la página esté cargada */
+document.addEventListener("DOMContentLoaded", function() {
+
+  convertirBotonesCarrito();
+
+});
+</script>
+```
+
 
 if(carrito.length===0){
 
