@@ -1,86 +1,102 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
-
 <meta charset="utf-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>EntreNosotros Sexshop Cali | Entrega HOY</title>
 
 <meta name="description" content="Sexshop en Cali con entrega hoy mismo. Compra discreta y envío rápido.">
-
 <meta name="keywords" content="sexshop cali, sex shop cali, vibradores cali, satisfyer cali, lubricantes cali, juguetes sexuales cali, tienda erotica cali">
-
 <meta name="robots" content="index,follow">
 
 <link rel="canonical" href="https://entrenosotrossexshop.com/">
 
 <meta property="og:title" content="EntreNosotros Sexshop Cali">
-
 <meta property="og:description" content="Entrega discreta el mismo día en Cali. Vibradores, lubricantes y más.">
-
 <meta property="og:type" content="website">
-
-<meta property="og:url" content="https://entrenosotrossexshop.com/">
-
 <meta property="og:image" content="https://entrenosotrossexshop.com/logo.png">
 
 <link rel="icon" type="image/png" href="logo.png">
 
-
-<!-- GOOGLE SEARCH CONSOLE -->
-
 <meta name="google-site-verification" content="CODIGO_DE_GOOGLE">
 
-
-<!-- DATOS ESTRUCTURADOS -->
-
 <script type="application/ld+json">
-
 {
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "EntreNosotros Sexshop Cali",
-  "telephone": "+573507305584",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Cali",
-    "addressCountry": "CO"
-  },
-  "url": "https://entrenosotrossexshop.com"
+ "@context":"https://schema.org",
+ "@type":"Store",
+ "name":"EntreNosotros Sexshop Cali",
+ "telephone":"+573507305584",
+ "address":{
+   "@type":"PostalAddress",
+   "addressLocality":"Cali",
+   "addressCountry":"CO"
+ },
+ "url":"https://entrenosotrossexshop.com"
+}
+</script>
+
+<script>
+
+function mostrarInfo(producto){
+
+if(producto==="classicblossom"){
+
+alert(
+"Satisfyer Pro 2 Classic Blossom\n\n"+
+"• Tecnología Liquid Air\n"+
+"• Ondas de presión sin contacto\n"+
+"• Diseño romántico y elegante\n"+
+"• Estimulación suave e intensa\n"+
+"• Material premium\n"+
+"• Discreto y silencioso"
+);
+
+}
+
+}
+
+function ampliarImagen(src){
+
+document.getElementById("imagenGrande").src=src;
+document.getElementById("lightbox").style.display="flex";
+
+}
+
+function cerrarImagen(){
+
+document.getElementById("lightbox").style.display="none";
+
 }
 
 </script>
 
+ 
+ <style>
+/* ===== CARRITO ===== */
 
-<style>
-
-/* =====================================================
-   GENERAL
-===================================================== */
-
-*{
-    box-sizing:border-box;
+#carritoBtn{
+position:fixed;
+bottom:90px;
+right:20px;
+background:#ff4fd8;
+color:#000;
+padding:15px 18px;
+border-radius:50px;
+font-weight:bold;
+cursor:pointer;
+z-index:99999;
+box-shadow:0 0 10px rgba(0,0,0,.4);
+font-size:16px;
 }
-
-html{
-    scroll-behavior:smooth;
-}
-
+  
 body{
     margin:0;
     font-family:Arial,sans-serif;
     background:linear-gradient(180deg,#0b0b12,#141426);
     color:white;
 }
-
-
-/* =====================================================
-   HEADER
-===================================================== */
 
 header{
     background:#000;
@@ -97,58 +113,31 @@ header{
     margin-bottom:20px;
 }
 
-
-/* =====================================================
-   BANNER
-===================================================== */
-
 .banner{
     background:linear-gradient(90deg,#ff4fd8,#7c5cff);
     padding:12px;
     text-align:center;
     font-weight:bold;
-    color:#000;
+    color:black;
     font-size:14px;
 }
 
-
-/* =====================================================
-   HERO
-===================================================== */
-
 .hero{
     text-align:center;
-    padding:30px 20px 15px;
-}
-
-.hero h1{
-    margin:0 0 10px;
-    font-size:32px;
-}
-
-.hero p{
-    color:#ccc;
-    margin:8px 0;
+    padding:20px;
 }
 
 .badges{
     font-size:14px;
     color:#ccc;
-    margin-top:15px;
+    margin-top:10px;
 }
-
-
-/* =====================================================
-   PRODUCTOS
-===================================================== */
 
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
     padding:20px;
-    max-width:1200px;
-    margin:auto;
 }
 
 .card{
@@ -166,22 +155,12 @@ header{
     border:1px solid #444;
 }
 
-.card h3{
-    margin:12px 0 8px;
-}
-
-.card p{
-    color:#bbb;
-    font-size:14px;
-    line-height:1.5;
-}
-
 .tag{
     position:absolute;
     top:10px;
     left:10px;
     background:#ff4fd8;
-    color:#000;
+    color:black;
     padding:4px 8px;
     font-size:12px;
     border-radius:6px;
@@ -194,34 +173,25 @@ header{
     border-radius:8px;
     overflow:hidden;
     margin-bottom:10px;
-    cursor:pointer;
 }
 
 .img img{
     width:100%;
     height:100%;
     object-fit:contain;
-    display:block;
 }
 
 .price{
     font-size:22px;
     font-weight:bold;
     color:#ff4fd8;
-    margin-top:10px;
 }
 
 .old{
     text-decoration:line-through;
     color:#777;
     font-size:14px;
-    margin-right:5px;
 }
-
-
-/* =====================================================
-   BOTONES
-===================================================== */
 
 button{
     margin-top:10px;
@@ -233,59 +203,36 @@ button{
     font-weight:bold;
     cursor:pointer;
     font-size:15px;
-    color:#000;
+    color:black;
 }
 
 button:hover{
     opacity:.9;
-    transform:scale(1.01);
 }
-
-
-/* =====================================================
-   PAGOS
-===================================================== */
 
 .payments{
     text-align:center;
-    padding:25px 20px;
+    padding:20px;
     background:#111;
-    margin:20px auto;
+    margin:20px;
     border-radius:10px;
-    max-width:1160px;
 }
-
-.payments h2{
-    margin-top:0;
-}
-
-.payments p{
-    color:#ccc;
-}
-
-
-/* =====================================================
-   ASESOR
-===================================================== */
 
 .asesor{
     text-align:center;
     background:#1a1a2e;
-    margin:20px auto;
-    padding:25px 20px;
+    margin:20px;
+    padding:20px;
     border-radius:12px;
     border:1px solid #333;
-    max-width:1160px;
 }
 
-.asesor p{
-    color:#ccc;
+footer{
+    text-align:center;
+    padding:20px;
+    border-top:1px solid #222;
+    color:#aaa;
 }
-
-
-/* =====================================================
-   WHATSAPP
-===================================================== */
 
 .whatsapp{
     position:fixed;
@@ -298,231 +245,44 @@ button:hover{
     text-decoration:none;
     font-size:20px;
     box-shadow:0 0 10px rgba(0,0,0,.4);
-    z-index:99998;
-    width:55px;
-    height:55px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
 }
 
-
-/* =====================================================
-   BOTÓN CARRITO
-===================================================== */
-
-#carritoBtn{
-    position:fixed;
-    bottom:90px;
-    right:20px;
-    background:#ff4fd8;
-    color:#000;
-    padding:15px 18px;
-    border-radius:50px;
-    font-weight:bold;
-    cursor:pointer;
-    z-index:99999;
-    box-shadow:0 0 10px rgba(0,0,0,.4);
-    font-size:16px;
-    border:none;
-    width:auto;
-}
-
-#contador{
-    display:inline-block;
-    min-width:22px;
-    padding:3px 6px;
-    margin-left:5px;
-    border-radius:20px;
-    background:#000;
-    color:#fff;
-}
-
-
-/* =====================================================
-   MODAL CARRITO
-===================================================== */
-
-#carritoModal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.85);
-    z-index:100000;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.carrito-contenido{
-    background:#141426;
-    width:100%;
-    max-width:550px;
-    max-height:90vh;
-    overflow-y:auto;
-    border-radius:15px;
-    padding:25px;
-    border:1px solid #333;
-    box-shadow:0 0 30px rgba(0,0,0,.6);
-}
-
-.carrito-contenido h2{
-    margin-top:0;
-    text-align:center;
-}
-
-.cerrar-carrito{
-    float:right;
-    width:auto;
-    margin:0;
-    padding:5px 10px;
-    background:#333;
-    color:white;
-}
-
-.carrito-item{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:10px;
-    padding:14px 0;
-    border-bottom:1px solid #333;
-}
-
-.carrito-item-info{
-    flex:1;
-}
-
-.carrito-item-info strong{
-    display:block;
-    margin-bottom:5px;
-}
-
-.carrito-item-info span{
-    color:#ff4fd8;
-    font-weight:bold;
-}
-
-.carrito-controles{
-    display:flex;
-    align-items:center;
-    gap:6px;
-}
-
-.carrito-controles button{
-    width:32px;
-    height:32px;
-    padding:0;
-    margin:0;
-    border-radius:6px;
-}
-
-.btn-eliminar{
-    background:#333 !important;
-    color:white !important;
-}
-
-.carrito-total{
-    text-align:right;
-    font-size:22px;
-    font-weight:bold;
-    color:#ff4fd8;
-    padding:20px 0 10px;
-}
-
-.btn-whatsapp-carrito{
-    background:#25d366;
-    color:white;
-}
-
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
+ /* ===== LIGHTBOX ===== */
 
 .lightbox{
-    display:none;
-    position:fixed;
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
-    background:rgba(0,0,0,.95);
-    justify-content:center;
-    align-items:center;
-    z-index:999999;
-    cursor:pointer;
-    padding:20px;
+display:none;
+position:fixed;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.95);
+justify-content:center;
+align-items:center;
+z-index:99999;
+cursor:pointer;
+padding:20px;
 }
 
 .lightbox img{
-    max-width:95%;
-    max-height:95%;
-    border-radius:15px;
-    box-shadow:0 0 25px rgba(255,79,216,.6);
-    animation:zoom .25s;
+max-width:95%;
+max-height:95%;
+border-radius:15px;
+box-shadow:0 0 25px rgba(255,79,216,.6);
+animation:zoom .25s;
 }
 
 @keyframes zoom{
 
-    from{
-        opacity:0;
-        transform:scale(.8);
-    }
-
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
-
+from{
+opacity:0;
+transform:scale(.8);
 }
 
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-    text-align:center;
-    padding:25px 20px;
-    border-top:1px solid #222;
-    color:#aaa;
-    margin-top:30px;
+to{
+opacity:1;
+transform:scale(1);
 }
-
-
-/* =====================================================
-   MÓVIL
-===================================================== */
-
-@media(max-width:600px){
-
-    .hero h1{
-        font-size:25px;
-    }
-
-    .grid{
-        grid-template-columns:1fr;
-        padding:15px;
-    }
-
-    .card{
-        padding:15px;
-    }
-
-    .img{
-        height:240px;
-    }
-
-    #carritoBtn{
-        right:15px;
-        bottom:85px;
-    }
-
-    .whatsapp{
-        right:15px;
-        bottom:15px;
-    }
 
 }
 
@@ -530,722 +290,60 @@ footer{
 
 </head>
 
-
 <body>
 
-
-<!-- =====================================================
-     LIGHTBOX
-===================================================== -->
-
-<div id="lightbox"
-     class="lightbox"
-     onclick="cerrarImagen()">
-
-    <img id="imagenGrande"
-         src=""
-         alt="Imagen ampliada">
-
+<div id="lightbox" class="lightbox" onclick="cerrarImagen()">
+    <img id="imagenGrande" alt="Imagen ampliada">
 </div>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+ <script>
 
-<header>
-
-    <img
-        src="logo.png"
-        class="logo"
-        alt="EntreNosotros Sexshop Cali"
-    >
-
-</header>
-
-
-<!-- =====================================================
-     BANNER
-===================================================== -->
-
-<div class="banner">
-
-    🔥 ENTREGA HOY EN CALI • PAGO CONTRA ENTREGA • DISCRETO 🔥
-
-</div>
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
-    <h1>EntreNosotros Sexshop Cali</h1>
-
-    <p>
-        Juguetes íntimos, lubricantes y productos para adultos.
-    </p>
-
-    <div class="badges">
-
-        🚚 Entrega discreta en Cali
-        &nbsp; • &nbsp;
-        💳 Pago contra entrega
-        &nbsp; • &nbsp;
-        🔒 Compra discreta
-
-    </div>
-
-</section>
-
-
-<!-- =====================================================
-     PRODUCTOS
-===================================================== -->
-
-<section class="grid" id="productos">
-
-
-    <!-- PRODUCTO 1 -->
-
-    <article class="card">
-
-        <span class="tag">
-            DESTACADO
-        </span>
-
-        <div class="img"
-             onclick="ampliarImagen('producto1.jpg')">
-
-            <img
-                src="producto1.jpg"
-                alt="Satisfyer Pro 2 Classic Blossom"
-                loading="lazy"
-            >
-
-        </div>
-
-        <h3>
-            Satisfyer Pro 2 Classic Blossom
-        </h3>
-
-        <p>
-            Tecnología Liquid Air y ondas de presión sin contacto.
-        </p>
-
-        <div class="price">
-            $0
-        </div>
-
-        <button
-            type="button"
-            onclick="mostrarInfo('classicblossom')">
-
-            ℹ️ Ver información
-
-        </button>
-
-        <button
-            type="button"
-            onclick="agregarCarrito('Satisfyer Pro 2 Classic Blossom',0)">
-
-            🛒 Agregar al carrito
-
-        </button>
-
-    </article>
-
-
-    <!-- =================================================
-         COPIA AQUÍ TUS DEMÁS PRODUCTOS
-    ================================================== -->
-
-
-</section>
-
-
-<!-- =====================================================
-     PAGOS
-===================================================== -->
-
-<section class="payments">
-
-    <h2>
-        💳 Métodos de pago
-    </h2>
-
-    <p>
-        Nequi • Daviplata • Pago contra entrega
-    </p>
-
-    <p>
-        📦 Entrega discreta en Cali
-    </p>
-
-</section>
-
-
-<!-- =====================================================
-     ASESOR
-===================================================== -->
-
-<section class="asesor">
-
-    <h2>
-        💬 ¿Necesitas ayuda?
-    </h2>
-
-    <p>
-        Escríbenos por WhatsApp y te ayudamos a elegir tu producto.
-    </p>
-
-    <a
-        href="https://wa.me/573507305584"
-        target="_blank"
-        rel="noopener noreferrer">
-
-        <button type="button">
-            💬 Hablar por WhatsApp
-        </button>
-
-    </a>
-
-</section>
-
-
-<!-- =====================================================
-     BOTÓN CARRITO
-===================================================== -->
-
-<button
-    id="carritoBtn"
-    type="button"
-    onclick="abrirCarrito()">
-
-    🛒 Carrito
-    <span id="contador">0</span>
-
-</button>
-
-
-<!-- =====================================================
-     MODAL CARRITO
-===================================================== -->
-
-<div
-    id="carritoModal"
-    onclick="cerrarCarritoDesdeFondo(event)">
-
-    <div
-        class="carrito-contenido"
-        onclick="event.stopPropagation()">
-
-        <button
-            type="button"
-            class="cerrar-carrito"
-            onclick="cerrarCarrito()">
-
-            ✕
-
-        </button>
-
-        <h2>
-            🛒 Tu carrito
-        </h2>
-
-        <div id="listaCarrito"></div>
-
-        <div
-            id="carritoTotal"
-            class="carrito-total">
-
-            Total: $0
-
-        </div>
-
-        <button
-            type="button"
-            class="btn-whatsapp-carrito"
-            onclick="enviarPedidoWhatsApp()">
-
-            💬 Finalizar pedido por WhatsApp
-
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
-     WHATSAPP FLOTANTE
-===================================================== -->
-
-<a
-    class="whatsapp"
-    href="https://wa.me/573507305584"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contactar por WhatsApp">
-
-    ☎
-
-</a>
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-    <p>
-        © 2026 EntreNosotros Sexshop Cali
-    </p>
-
-    <p>
-        Compra discreta y entrega en Cali.
-    </p>
-
-</footer>
-
-
-<script>
-
-/* =====================================================
-   INFORMACIÓN DE PRODUCTOS
-===================================================== */
-
-function mostrarInfo(producto){
-
-    if(producto === "classicblossom"){
-
-        alert(
-            "Satisfyer Pro 2 Classic Blossom\n\n" +
-
-            "• Tecnología Liquid Air\n" +
-            "• Ondas de presión sin contacto\n" +
-            "• Diseño romántico y elegante\n" +
-            "• Estimulación suave e intensa\n" +
-            "• Material premium\n" +
-            "• Discreto y silencioso"
-        );
-
-    }
-
-}
-
-
-/* =====================================================
-   LIGHTBOX
-===================================================== */
-
-function ampliarImagen(src){
-
-    const imagen =
-        document.getElementById("imagenGrande");
-
-    const lightbox =
-        document.getElementById("lightbox");
-
-    imagen.src = src;
-
-    lightbox.style.display = "flex";
-
-}
-
-
-function cerrarImagen(){
-
-    document.getElementById("lightbox").style.display = "none";
-
-}
-
-
-/* =====================================================
-   CARRITO
-===================================================== */
-
-let carrito = [];
-
-
-/* =====================================================
-   CONTADOR
-===================================================== */
-
-function actualizarContador(){
-
-    const contador =
-        document.getElementById("contador");
-
-    if(contador){
-
-        contador.innerText =
-            carrito.reduce(function(total,item){
-
-                return total + item.cantidad;
-
-            },0);
-
-    }
-
-}
-
-
-/* =====================================================
-   AGREGAR PRODUCTO
-===================================================== */
+let carrito=[];
 
 function agregarCarrito(nombre,precio){
 
-    precio = Number(precio);
+carrito.push({
+nombre:nombre,
+precio:precio
+});
 
-    if(!nombre || isNaN(precio) || precio <= 0){
-
-        alert(
-            "⚠️ Este producto no tiene un precio válido."
-        );
-
-        return;
-
-    }
-
-
-    const productoExistente =
-        carrito.find(function(item){
-
-            return item.nombre === nombre;
-
-        });
-
-
-    if(productoExistente){
-
-        productoExistente.cantidad++;
-
-    }else{
-
-        carrito.push({
-
-            nombre:nombre,
-
-            precio:precio,
-
-            cantidad:1
-
-        });
-
-    }
-
-
-    actualizarContador();
-
-    mostrarCarrito();
-
-    alert(
-        "✅ " + nombre +
-        " fue agregado al carrito."
-    );
+document.getElementById("contador").innerText=carrito.length;
 
 }
-
-
-/* =====================================================
-   ELIMINAR PRODUCTO
-===================================================== */
-
-function eliminarProducto(indice){
-
-    carrito.splice(indice,1);
-
-    actualizarContador();
-
-    mostrarCarrito();
-
-}
-
-
-/* =====================================================
-   CAMBIAR CANTIDAD
-===================================================== */
-
-function cambiarCantidad(indice,cambio){
-
-    if(!carrito[indice]){
-        return;
-    }
-
-
-    carrito[indice].cantidad += cambio;
-
-
-    if(carrito[indice].cantidad <= 0){
-
-        carrito.splice(indice,1);
-
-    }
-
-
-    actualizarContador();
-
-    mostrarCarrito();
-
-}
-
-
-/* =====================================================
-   MOSTRAR CARRITO
-===================================================== */
-
-function mostrarCarrito(){
-
-    const lista =
-        document.getElementById("listaCarrito");
-
-    const totalElemento =
-        document.getElementById("carritoTotal");
-
-
-    if(!lista){
-        return;
-    }
-
-
-    lista.innerHTML = "";
-
-
-    if(carrito.length === 0){
-
-        lista.innerHTML =
-            "<p style='text-align:center;color:#aaa;'>🛒 Tu carrito está vacío.</p>";
-
-        totalElemento.innerText =
-            "Total: $0";
-
-        return;
-
-    }
-
-
-    let total = 0;
-
-
-    carrito.forEach(function(item,indice){
-
-        const subtotal =
-            item.precio * item.cantidad;
-
-
-        total += subtotal;
-
-
-        const div =
-            document.createElement("div");
-
-        div.className =
-            "carrito-item";
-
-
-        div.innerHTML = `
-
-            <div class="carrito-item-info">
-
-                <strong>
-                    ${item.nombre}
-                </strong>
-
-                <span>
-                    $${subtotal.toLocaleString("es-CO")}
-                </span>
-
-            </div>
-
-
-            <div class="carrito-controles">
-
-                <button
-                    type="button"
-                    onclick="cambiarCantidad(${indice},-1)">
-
-                    −
-
-                </button>
-
-
-                <strong>
-                    ${item.cantidad}
-                </strong>
-
-
-                <button
-                    type="button"
-                    onclick="cambiarCantidad(${indice},1)">
-
-                    +
-
-                </button>
-
-
-                <button
-                    type="button"
-                    class="btn-eliminar"
-                    onclick="eliminarProducto(${indice})">
-
-                    🗑️
-
-                </button>
-
-            </div>
-
-        `;
-
-
-        lista.appendChild(div);
-
-    });
-
-
-    totalElemento.innerText =
-        "Total: $" +
-        total.toLocaleString("es-CO");
-
-}
-
-
-/* =====================================================
-   ABRIR CARRITO
-===================================================== */
 
 function abrirCarrito(){
 
-    mostrarCarrito();
+if(carrito.length===0){
 
-    document.getElementById("carritoModal").style.display =
-        "flex";
+alert("Tu carrito está vacío");
 
-}
-
-
-/* =====================================================
-   CERRAR CARRITO
-===================================================== */
-
-function cerrarCarrito(){
-
-    document.getElementById("carritoModal").style.display =
-        "none";
+return;
 
 }
 
+let mensaje="Hola, quiero pedir:%0A%0A";
 
-function cerrarCarritoDesdeFondo(event){
+let total=0;
 
-    if(event.target.id === "carritoModal"){
+carrito.forEach(item=>{
 
-        cerrarCarrito();
+mensaje+="• "+item.nombre+" - $"+item.precio.toLocaleString('es-CO')+"%0A";
 
-    }
+total+=item.precio;
 
-}
+});
 
+mensaje+="%0A💰 Total: $"+total.toLocaleString('es-CO');
 
-/* =====================================================
-   ENVIAR PEDIDO A WHATSAPP
-===================================================== */
-
-function enviarPedidoWhatsApp(){
-
-    if(carrito.length === 0){
-
-        alert("🛒 Tu carrito está vacío.");
-
-        return;
-
-    }
-
-
-    let total = 0;
-
-
-    let productos =
-        carrito.map(function(item){
-
-            const subtotal =
-                item.precio * item.cantidad;
-
-
-            total += subtotal;
-
-
-            return (
-                "• " +
-                item.nombre +
-                " x" +
-                item.cantidad +
-                " - $" +
-                subtotal.toLocaleString("es-CO")
-            );
-
-        });
-
-
-    let mensaje =
-
-        "Hola 👋, quiero hacer este pedido:\n\n" +
-
-        productos.join("\n") +
-
-        "\n\n💰 Total: $" +
-
-        total.toLocaleString("es-CO") +
-
-        "\n\n📦 Deseo recibir información sobre la entrega.";
-
-
-    const url =
-
-        "https://wa.me/573507305584?text=" +
-
-        encodeURIComponent(mensaje);
-
-
-    window.open(
-        url,
-        "_blank",
-        "noopener,noreferrer"
-    );
-
-}
-
-
-/* =====================================================
-   ESCAPE PARA CERRAR MODALES
-===================================================== */
-
-document.addEventListener(
-    "keydown",
-    function(event){
-
-        if(event.key === "Escape"){
-
-            cerrarImagen();
-
-            cerrarCarrito();
-
-        }
-
-    }
+window.open(
+"https://wa.me/573507305584?text="+mensaje,
+"_blank"
 );
 
+}
+
 </script>
-
-
-</body>
-
-</html>
-```
-
  
   
 <div id="carritoBtn" onclick="abrirCarrito()">
