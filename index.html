@@ -296,165 +296,242 @@ transform:scale(1);
     <img id="imagenGrande" alt="Imagen ampliada">
 </div>
 
-
- <script>
-
+ 
 ```html
 <script>
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+function ampliarImagen(src) {
+    document.getElementById("imagenGrande").src = src;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function cerrarImagen() {
+    document.getElementById("lightbox").style.display = "none";
+}
+
+
 /* =========================
    CARRITO
 ========================= */
 
 let carrito = [];
 
-function agregarCarrito(nombre, precio) {
 
-  carrito.push({
-    nombre: nombre,
-    precio: precio
-  });
+function actualizarContador() {
 
-  document.getElementById("contador").innerText = carrito.length;
+    const contador = document.getElementById("contador");
 
-  alert("✅ " + nombre + " fue agregado al carrito");
+    if (contador) {
+        contador.innerText = carrito.length;
+    }
+
 }
 
 
-function abrirCarrito() {
+function agregarCarrito(nombre, precio) {
 
-  if (carrito.length === 0) {
-    alert("🛒 Tu carrito está vacío");
-    return;
-  }
+    carrito.push({
+        nombre: nombre,
+        precio: Number(precio)
+    });
 
-  let total = 0;
+    actualizarContador();
 
-  let productos = carrito.map(function(item) {
+    alert("✅ " + nombre + " fue agregado al carrito");
 
-    total += item.precio;
-
-    return "• " + item.nombre +
-           " - $" +
-           item.precio.toLocaleString("es-CO");
-
-  });
-
-  let mensaje =
-    "Hola, quiero hacer este pedido:\n\n" +
-    productos.join("\n") +
-    "\n\n💰 Total: $" +
-    total.toLocaleString("es-CO");
-
-  window.open(
-    "https://wa.me/573507305584?text=" +
-    encodeURIComponent(mensaje),
-    "_blank"
-  );
 }
 
 
 /* =========================
-   CONVERTIR AUTOMÁTICAMENTE
-   LOS ANTIGUOS "PEDIR AHORA"
-   EN BOTONES DEL CARRITO
+   ABRIR CARRITO Y ENVIAR
+   PEDIDO A WHATSAPP
+========================= */
+
+function abrirCarrito() {
+
+    if (carrito.length === 0) {
+
+        alert("🛒 Tu carrito está vacío");
+
+        return;
+    }
+
+
+    let total = 0;
+
+
+    let productos = carrito.map(function(item) {
+
+        total += item.precio;
+
+        return "• " +
+               item.nombre +
+               " - $" +
+               item.precio.toLocaleString("es-CO");
+
+    });
+
+
+    let mensaje =
+        "Hola, quiero hacer este pedido:\n\n" +
+        productos.join("\n") +
+        "\n\n💰 Total: $" +
+        total.toLocaleString("es-CO");
+
+
+    const url =
+        "https://wa.me/573507305584?text=" +
+        encodeURIComponent(mensaje);
+
+
+    window.open(url, "_blank");
+
+}
+
+
+/* =========================
+   CONVERTIR LOS BOTONES
+   ANTIGUOS "PEDIR AHORA"
+   EN "AGREGAR AL CARRITO"
 ========================= */
 
 function convertirBotonesCarrito() {
 
-  const tarjetas = document.querySelectorAll(".card");
+    const tarjetas = document.querySelectorAll(".card");
 
-  tarjetas.forEach(function(card) {
 
-    const enlace = card.querySelector('a[href*="wa.me"]');
+    tarjetas.forEach(function(card) {
 
-    if (!enlace) return;
+        const enlace = card.querySelector('a[href*="wa.me"]');
 
-    const boton = enlace.querySelector("button");
 
-    if (!boton) return;
+        if (!enlace) {
+            return;
+        }
 
-    const textoBoton = boton.innerText.trim().toLowerCase();
 
-    if (!textoBoton.includes("pedir ahora")) return;
+        const boton = enlace.querySelector("button");
 
-    /* Obtener nombre del producto */
-    const titulo = card.querySelector("h3");
 
-    if (!titulo) return;
+        if (!boton) {
+            return;
+        }
 
-    const nombre = titulo.innerText.trim();
 
-    /* Obtener precio de venta */
-    const precioElemento = card.querySelector(".price");
+        const texto = boton.innerText
+            .trim()
+            .toLowerCase();
 
-    if (!precioElemento) return;
 
-    let precioTexto = precioElemento.innerText;
+        if (!texto.includes("pedir ahora")) {
+            return;
+        }
 
-    /* Quitar $, puntos, espacios y otros caracteres */
-    precioTexto = precioTexto.replace(/[^\d]/g, "");
 
-    const precio = parseInt(precioTexto, 10);
+        const titulo = card.querySelector("h3");
 
-    if (isNaN(precio) || precio <= 0) return;
 
-    /* Crear nuevo botón */
-    const nuevoBoton = document.createElement("button");
+        if (!titulo) {
+            return;
+        }
 
-    nuevoBoton.type = "button";
-    nuevoBoton.innerText = "🛒 Agregar al carrito";
 
-    nuevoBoton.onclick = function() {
-      agregarCarrito(nombre, precio);
-    };
+        const nombre = titulo.innerText.trim();
 
-    /* Reemplazar enlace completo */
-    enlace.replaceWith(nuevoBoton);
 
-  });
+        const precioElemento =
+            card.querySelector(".price");
+
+
+        if (!precioElemento) {
+            return;
+        }
+
+
+        let precioTexto =
+            precioElemento.innerText;
+
+
+        /*
+         * Convierte:
+         * $39.900
+         * en:
+         * 39900
+         */
+
+        precioTexto =
+            precioTexto.replace(/[^\d]/g, "");
+
+
+        const precio =
+            parseInt(precioTexto, 10);
+
+
+        /*
+         * Si el producto no tiene
+         * precio válido, no modifica
+         * su botón.
+         */
+
+        if (isNaN(precio) || precio <= 0) {
+            return;
+        }
+
+
+        const nuevoBoton =
+            document.createElement("button");
+
+
+        nuevoBoton.type = "button";
+
+
+        nuevoBoton.innerText =
+            "🛒 Agregar al carrito";
+
+
+        nuevoBoton.onclick = function() {
+
+            agregarCarrito(
+                nombre,
+                precio
+            );
+
+        };
+
+
+        /*
+         * Eliminamos el enlace
+         * que abría WhatsApp
+         * directamente.
+         */
+
+        enlace.replaceWith(nuevoBoton);
+
+    });
+
 }
 
 
-/* Ejecutar cuando la página esté cargada */
-document.addEventListener("DOMContentLoaded", function() {
+/* =========================
+   EJECUTAR AL CARGAR
+   LA PÁGINA
+========================= */
 
-  convertirBotonesCarrito();
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
 
-});
-</script>
-```
+        convertirBotonesCarrito();
 
-
-if(carrito.length===0){
-
-alert("Tu carrito está vacío");
-
-return;
-
-}
-
-let mensaje="Hola, quiero pedir:%0A%0A";
-
-let total=0;
-
-carrito.forEach(item=>{
-
-mensaje+="• "+item.nombre+" - $"+item.precio.toLocaleString('es-CO')+"%0A";
-
-total+=item.precio;
-
-});
-
-mensaje+="%0A💰 Total: $"+total.toLocaleString('es-CO');
-
-window.open(
-"https://wa.me/573507305584?text="+mensaje,
-"_blank"
+    }
 );
 
-}
-
 </script>
+```
  
   
 <div id="carritoBtn" onclick="abrirCarrito()">
