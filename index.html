@@ -1,6 +1,6 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,57 +24,204 @@
 
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@type":"Store",
- "name":"EntreNosotros Sexshop Cali",
- "telephone":"+573507305584",
- "address":{
-   "@type":"PostalAddress",
-   "addressLocality":"Cali",
-   "addressCountry":"CO"
- },
- "url":"https://entrenosotrossexshop.com"
+  "@context":"https://schema.org",
+  "@type":"Store",
+  "name":"EntreNosotros Sexshop Cali",
+  "telephone":"+573507305584",
+  "address":{
+    "@type":"PostalAddress",
+    "addressLocality":"Cali",
+    "addressCountry":"CO"
+  },
+  "url":"https://entrenosotrossexshop.com"
 }
 </script>
 
-<script>
+<style>
 
-function mostrarInfo(producto){
+/* ===== GENERAL ===== */
 
-if(producto==="classicblossom"){
-
-alert(
-"Satisfyer Pro 2 Classic Blossom\n\n"+
-"• Tecnología Liquid Air\n"+
-"• Ondas de presión sin contacto\n"+
-"• Diseño romántico y elegante\n"+
-"• Estimulación suave e intensa\n"+
-"• Material premium\n"+
-"• Discreto y silencioso"
-);
-
+*{
+box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
 }
 
-function ampliarImagen(src){
-
-document.getElementById("imagenGrande").src=src;
-document.getElementById("lightbox").style.display="flex";
-
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(180deg,#0b0b12,#141426);
+color:white;
 }
 
-function cerrarImagen(){
-
-document.getElementById("lightbox").style.display="none";
-
+header{
+background:#000;
+text-align:center;
+padding:35px 20px;
+border-bottom:1px solid #222;
 }
 
-</script>
+.logo{
+width:320px;
+max-width:90%;
+display:block;
+margin:auto;
+margin-bottom:20px;
+}
 
- 
- <style>
-/* ===== CARRITO ===== */
+.banner{
+background:linear-gradient(90deg,#ff4fd8,#7c5cff);
+padding:12px;
+text-align:center;
+font-weight:bold;
+color:#000;
+font-size:14px;
+}
+
+.hero{
+text-align:center;
+padding:20px;
+}
+
+.badges{
+font-size:14px;
+color:#ccc;
+margin-top:10px;
+line-height:1.8;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+max-width:1500px;
+margin:auto;
+}
+
+.card{
+background:#141426;
+padding:20px;
+border-radius:12px;
+text-align:center;
+position:relative;
+transition:.3s;
+border:1px solid #222;
+}
+
+.card:hover{
+transform:translateY(-5px);
+border:1px solid #444;
+}
+
+.tag{
+position:absolute;
+top:10px;
+left:10px;
+background:#ff4fd8;
+color:#000;
+padding:4px 8px;
+font-size:12px;
+border-radius:6px;
+font-weight:bold;
+z-index:2;
+}
+
+.img{
+height:220px;
+background:white;
+border-radius:8px;
+overflow:hidden;
+margin-bottom:10px;
+}
+
+.img img{
+width:100%;
+height:100%;
+object-fit:contain;
+cursor:zoom-in;
+}
+
+.price{
+font-size:22px;
+font-weight:bold;
+color:#ff4fd8;
+}
+
+.old{
+text-decoration:line-through;
+color:#777;
+font-size:14px;
+}
+
+button{
+margin-top:10px;
+background:linear-gradient(90deg,#ff4fd8,#7c5cff);
+border:none;
+padding:12px;
+width:100%;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+font-size:15px;
+color:#000;
+}
+
+button:hover{
+opacity:.9;
+}
+
+.product-actions{
+display:grid;
+gap:8px;
+margin-top:12px;
+}
+
+.product-actions button{
+margin-top:0;
+}
+
+.payments{
+text-align:center;
+padding:20px;
+background:#111;
+margin:20px;
+border-radius:10px;
+}
+
+.asesor{
+text-align:center;
+background:#1a1a2e;
+margin:20px;
+padding:20px;
+border-radius:12px;
+border:1px solid #333;
+}
+
+footer{
+text-align:center;
+padding:20px;
+border-top:1px solid #222;
+color:#aaa;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+color:white;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+font-size:20px;
+box-shadow:0 0 10px rgba(0,0,0,.4);
+z-index:9998;
+}
+
+/* ===== BOTÓN CARRITO ===== */
 
 #carritoBtn{
 position:fixed;
@@ -90,164 +237,8 @@ z-index:99999;
 box-shadow:0 0 10px rgba(0,0,0,.4);
 font-size:16px;
 }
-  
-body{
-    margin:0;
-    font-family:Arial,sans-serif;
-    background:linear-gradient(180deg,#0b0b12,#141426);
-    color:white;
-}
 
-header{
-    background:#000;
-    text-align:center;
-    padding:35px 20px;
-    border-bottom:1px solid #222;
-}
-
-.logo{
-    width:320px;
-    max-width:90%;
-    display:block;
-    margin:auto;
-    margin-bottom:20px;
-}
-
-.banner{
-    background:linear-gradient(90deg,#ff4fd8,#7c5cff);
-    padding:12px;
-    text-align:center;
-    font-weight:bold;
-    color:black;
-    font-size:14px;
-}
-
-.hero{
-    text-align:center;
-    padding:20px;
-}
-
-.badges{
-    font-size:14px;
-    color:#ccc;
-    margin-top:10px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:20px;
-}
-
-.card{
-    background:#141426;
-    padding:20px;
-    border-radius:12px;
-    text-align:center;
-    position:relative;
-    transition:.3s;
-    border:1px solid #222;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-    border:1px solid #444;
-}
-
-.tag{
-    position:absolute;
-    top:10px;
-    left:10px;
-    background:#ff4fd8;
-    color:black;
-    padding:4px 8px;
-    font-size:12px;
-    border-radius:6px;
-    font-weight:bold;
-}
-
-.img{
-    height:220px;
-    background:white;
-    border-radius:8px;
-    overflow:hidden;
-    margin-bottom:10px;
-}
-
-.img img{
-    width:100%;
-    height:100%;
-    object-fit:contain;
-}
-
-.price{
-    font-size:22px;
-    font-weight:bold;
-    color:#ff4fd8;
-}
-
-.old{
-    text-decoration:line-through;
-    color:#777;
-    font-size:14px;
-}
-
-button{
-    margin-top:10px;
-    background:linear-gradient(90deg,#ff4fd8,#7c5cff);
-    border:none;
-    padding:12px;
-    width:100%;
-    border-radius:8px;
-    font-weight:bold;
-    cursor:pointer;
-    font-size:15px;
-    color:black;
-}
-
-button:hover{
-    opacity:.9;
-}
-
-.payments{
-    text-align:center;
-    padding:20px;
-    background:#111;
-    margin:20px;
-    border-radius:10px;
-}
-
-.asesor{
-    text-align:center;
-    background:#1a1a2e;
-    margin:20px;
-    padding:20px;
-    border-radius:12px;
-    border:1px solid #333;
-}
-
-footer{
-    text-align:center;
-    padding:20px;
-    border-top:1px solid #222;
-    color:#aaa;
-}
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25d366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    text-decoration:none;
-    font-size:20px;
-    box-shadow:0 0 10px rgba(0,0,0,.4);
-}
-
- /* ===== LIGHTBOX ===== */
+/* ===== LIGHTBOX ===== */
 
 .lightbox{
 display:none;
@@ -286,33 +277,489 @@ transform:scale(1);
 
 }
 
-</style>
+/* ===== MODAL CARRITO ===== */
 
-</head>
+.cart-modal{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.82);
+z-index:100000;
+justify-content:center;
+align-items:center;
+padding:18px;
+}
 
-<body>
+.cart-box{
+position:relative;
+width:min(520px,100%);
+max-height:90vh;
+overflow:auto;
+background:#141426;
+border:1px solid #444;
+border-radius:16px;
+padding:22px;
+box-shadow:0 0 30px rgba(255,79,216,.25);
+}
 
-<div id="lightbox" class="lightbox" onclick="cerrarImagen()">
-    <img id="imagenGrande" alt="Imagen ampliada">
-</div>
+.cart-box h2{
+text-align:center;
+margin:4px 0 18px;
+}
 
+.cart-close{
+position:absolute;
+right:12px;
+top:10px;
+width:42px!important;
+padding:6px!important;
+margin:0!important;
+background:none!important;
+color:white!important;
+font-size:30px;
+line-height:1;
+}
 
- <script>
+#carritoVacio{
+text-align:center;
+color:#aaa;
+}
 
-let carrito=[];
+.cart-item{
+display:flex;
+justify-content:space-between;
+gap:12px;
+align-items:center;
+padding:12px 0;
+border-bottom:1px solid #29293b;
+}
 
-function agregarCarrito(nombre,precio){
+.cart-item-info{
+display:flex;
+flex-direction:column;
+gap:5px;
+min-width:0;
+}
 
-carrito.push({
-nombre:nombre,
-precio:precio
-});
+.cart-item-info strong{
+overflow-wrap:anywhere;
+}
 
-document.getElementById("contador").innerText=carrito.length;
+.cart-item-info span{
+font-size:13px;
+color:#aaa;
+}
+
+.cart-controls{
+display:flex;
+align-items:center;
+gap:7px;
+flex-shrink:0;
+}
+
+.cart-controls button{
+width:34px!important;
+height:34px;
+margin:0!important;
+padding:4px!important;
+background:#25253a!important;
+color:white!important;
+}
+
+.cart-controls .delete-btn{
+background:#3a1b2e!important;
+}
+
+.cart-summary{
+display:flex;
+justify-content:space-between;
+font-size:20px;
+padding:18px 0;
+}
+
+#totalCarrito{
+color:#ff4fd8;
+font-weight:bold;
+}
+
+.checkout-btn{
+margin-top:0!important;
+}
+
+@media(max-width:480px){
+
+.grid{
+padding:12px;
+gap:15px;
+}
+
+.card{
+padding:15px;
+}
+
+.img{
+height:200px;
+}
+
+.cart-box{
+padding:18px;
+}
+
+.cart-item{
+align-items:flex-start;
+flex-direction:column;
+}
+
+.cart-controls{
+align-self:flex-end;
+}
 
 }
 
+</style>
+
+<script>
+
+const WA_NUMBER="573507305584";
+
+let carrito=[];
+
+
+/* ===== FORMATO DE PRECIOS ===== */
+
+function formatearPrecio(valor){
+
+return Number(valor||0).toLocaleString("es-CO");
+
+}
+
+
+/* ===== INFORMACIÓN PRODUCTO ===== */
+
+function mostrarInfo(producto){
+
+if(producto==="classicblossom"){
+
+alert(
+"Satisfyer Pro 2 Classic Blossom\n\n"+
+"• Tecnología Liquid Air\n"+
+"• Ondas de presión sin contacto\n"+
+"• Diseño romántico y elegante\n"+
+"• Estimulación suave e intensa\n"+
+"• Material premium\n"+
+"• Discreto y silencioso"
+);
+
+}
+
+}
+
+
+/* ===== LIGHTBOX ===== */
+
+function ampliarImagen(src){
+
+const imagen=document.getElementById("imagenGrande");
+const lightbox=document.getElementById("lightbox");
+
+if(imagen && lightbox){
+
+imagen.src=src;
+
+lightbox.style.display="flex";
+
+document.body.style.overflow="hidden";
+
+}
+
+}
+
+
+function cerrarImagen(){
+
+const lightbox=document.getElementById("lightbox");
+
+if(lightbox){
+
+lightbox.style.display="none";
+
+document.body.style.overflow="";
+
+}
+
+}
+
+
+/* ===== AGREGAR AL CARRITO ===== */
+
+function agregarCarrito(nombre,precio){
+
+const existente=carrito.find(
+item=>item.nombre===nombre
+);
+
+if(existente){
+
+existente.cantidad+=1;
+
+}else{
+
+carrito.push({
+
+nombre:nombre,
+
+precio:Number(precio)||0,
+
+cantidad:1
+
+});
+
+}
+
+actualizarCarrito();
+
+}
+
+
+/* ===== AGREGAR DESDE PRODUCTO ===== */
+
+function agregarCarritoDesdeBoton(boton){
+
+agregarCarrito(
+boton.dataset.nombre,
+Number(boton.dataset.precio)
+);
+
+abrirCarrito();
+
+}
+
+
+/* ===== CAMBIAR CANTIDAD ===== */
+
+function cambiarCantidad(index,cambio){
+
+if(!carrito[index]) return;
+
+carrito[index].cantidad+=cambio;
+
+if(carrito[index].cantidad<=0){
+
+carrito.splice(index,1);
+
+}
+
+actualizarCarrito();
+
+renderCarrito();
+
+}
+
+
+/* ===== ELIMINAR ===== */
+
+function eliminarDelCarrito(index){
+
+carrito.splice(index,1);
+
+actualizarCarrito();
+
+renderCarrito();
+
+}
+
+
+/* ===== TOTAL ===== */
+
+function totalCarrito(){
+
+return carrito.reduce(
+
+(total,item)=>
+total+(item.precio*item.cantidad),
+
+0
+
+);
+
+}
+
+
+/* ===== CONTADOR ===== */
+
+function actualizarCarrito(){
+
+const contador=
+document.getElementById("contador");
+
+const cantidad=
+carrito.reduce(
+(total,item)=>total+item.cantidad,
+0
+);
+
+if(contador){
+
+contador.textContent=cantidad;
+
+}
+
+}
+
+
+/* ===== ABRIR CARRITO ===== */
+
 function abrirCarrito(){
+
+const modal=
+document.getElementById("carritoModal");
+
+if(!modal) return;
+
+modal.style.display="flex";
+
+renderCarrito();
+
+}
+
+
+/* ===== CERRAR CARRITO ===== */
+
+function cerrarCarrito(){
+
+const modal=
+document.getElementById("carritoModal");
+
+if(modal){
+
+modal.style.display="none";
+
+}
+
+}
+
+
+/* ===== MOSTRAR CARRITO ===== */
+
+function renderCarrito(){
+
+const lista=
+document.getElementById("listaCarrito");
+
+const total=
+document.getElementById("totalCarrito");
+
+const vacio=
+document.getElementById("carritoVacio");
+
+const checkout=
+document.getElementById("checkoutCarrito");
+
+if(!lista || !total) return;
+
+lista.innerHTML="";
+
+
+if(carrito.length===0){
+
+if(vacio)
+vacio.style.display="block";
+
+if(checkout)
+checkout.style.display="none";
+
+total.textContent="$0";
+
+return;
+
+}
+
+
+if(vacio)
+vacio.style.display="none";
+
+if(checkout)
+checkout.style.display="block";
+
+
+carrito.forEach((item,index)=>{
+
+const fila=
+document.createElement("div");
+
+fila.className="cart-item";
+
+
+fila.innerHTML=`
+
+<div class="cart-item-info">
+
+<strong>
+${escapeHtml(item.nombre)}
+</strong>
+
+<span>
+$${formatearPrecio(item.precio)} c/u
+</span>
+
+</div>
+
+<div class="cart-controls">
+
+<button
+type="button"
+onclick="cambiarCantidad(${index},-1)">
+−
+</button>
+
+<span>
+${item.cantidad}
+</span>
+
+<button
+type="button"
+onclick="cambiarCantidad(${index},1)">
++
+</button>
+
+<button
+type="button"
+class="delete-btn"
+onclick="eliminarDelCarrito(${index})">
+🗑️
+</button>
+
+</div>
+
+`;
+
+lista.appendChild(fila);
+
+});
+
+
+total.textContent=
+"$"+formatearPrecio(totalCarrito());
+
+}
+
+
+/* ===== SEGURIDAD TEXTO ===== */
+
+function escapeHtml(text){
+
+const div=document.createElement("div");
+
+div.textContent=text;
+
+return div.innerHTML;
+
+}
+
+
+/* ===== FINALIZAR PEDIDO ===== */
+
+function finalizarPedido(){
 
 if(carrito.length===0){
 
@@ -322,708 +769,1656 @@ return;
 
 }
 
-let mensaje="Hola, quiero pedir:%0A%0A";
 
-let total=0;
+let mensaje=
+"Hola, quiero hacer este pedido:%0A%0A";
+
 
 carrito.forEach(item=>{
 
-mensaje+="• "+item.nombre+" - $"+item.precio.toLocaleString('es-CO')+"%0A";
-
-total+=item.precio;
+mensaje+=
+"• "+
+encodeURIComponent(item.nombre)+
+" x"+
+item.cantidad+
+" - $"+
+formatearPrecio(
+item.precio*item.cantidad
+)+
+"%0A";
 
 });
 
-mensaje+="%0A💰 Total: $"+total.toLocaleString('es-CO');
+
+mensaje+=
+"%0A💰 Total: $"+
+formatearPrecio(totalCarrito());
+
+
+mensaje+=
+"%0A%0A📦 Entrega discreta - Cali";
+
 
 window.open(
-"https://wa.me/573507305584?text="+mensaje,
+
+"https://wa.me/"+
+WA_NUMBER+
+"?text="+
+mensaje,
+
 "_blank"
+
 );
 
 }
 
+
+/* ===== COMPRAR AHORA ===== */
+
+function comprarAhora(boton){
+
+const nombre=
+boton.dataset.nombre;
+
+const precio=
+Number(boton.dataset.precio)||0;
+
+
+const mensaje=
+
+"Hola, quiero el: "+
+encodeURIComponent(nombre)+
+
+"%0A%0A💰 Precio: $"+
+formatearPrecio(precio)+
+
+"%0A%0A📦 Entrega discreta - Cali";
+
+
+window.open(
+
+"https://wa.me/"+
+WA_NUMBER+
+"?text="+
+mensaje,
+
+"_blank"
+
+);
+
+}
+
+
+/* ===== INICIALIZACIÓN ===== */
+
+document.addEventListener(
+"DOMContentLoaded",
+()=>{
+
+document
+.querySelectorAll(".card .img img")
+.forEach(img=>{
+
+img.style.cursor="zoom-in";
+
+img.addEventListener(
+"click",
+()=>ampliarImagen(img.src)
+);
+
+});
+
+actualizarCarrito();
+
+}
+);
+
 </script>
- 
-  
-<div id="carritoBtn" onclick="abrirCarrito()">
+
+</head>
+
+<body>
+
+
+<!-- LIGHTBOX -->
+
+<div
+id="lightbox"
+class="lightbox"
+onclick="cerrarImagen()">
+
+<img
+id="imagenGrande"
+alt="Imagen ampliada">
+
+</div>
+
+
+<!-- CARRITO -->
+
+<div
+id="carritoModal"
+class="cart-modal"
+onclick="if(event.target===this) cerrarCarrito()">
+
+<div class="cart-box">
+
+<button
+type="button"
+class="cart-close"
+onclick="cerrarCarrito()">
+
+×
+
+</button>
+
+<h2>🛒 Tu carrito</h2>
+
+<p id="carritoVacio">
+Tu carrito está vacío.
+</p>
+
+<div id="listaCarrito"></div>
+
+<div class="cart-summary">
+
+<strong>Total:</strong>
+
+<span id="totalCarrito">
+$0
+</span>
+
+</div>
+
+<div id="checkoutCarrito">
+
+<button
+type="button"
+class="checkout-btn"
+onclick="finalizarPedido()">
+
+💬 Finalizar pedido por WhatsApp
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- BOTÓN CARRITO -->
+
+<div
+id="carritoBtn"
+onclick="abrirCarrito()">
+
 🛒 <span id="contador">0</span>
+
 </div>
-  
-  <div class="banner">
+
+
+<!-- BANNER -->
+
+<div class="banner">
+
 🔥 ENTREGA HOY EN CALI • PAGO CONTRA ENTREGA • DISCRETO 🔥
+
 </div>
+
+
+<!-- HEADER -->
 
 <header>
 
-<img src="logo.png" class="logo" alt="EntreNosotros Sexshop Cali">
+<img
+src="logo.png"
+class="logo"
+alt="EntreNosotros Sexshop Cali">
 
-<h1>🔥 EntreNosotros Sexshop Cali</h1>
+<h1>
+🔥 EntreNosotros Sexshop Cali
+</h1>
 
-<p style="color:#ff4fd8;font-weight:bold;">
+<p
+style="color:#ff4fd8;font-weight:bold;">
+
 ⚡ Compra hoy y recibe en menos de 24 horas
+
 </p>
 
-<p>Entrega rápida • 100% discreto</p>
+<p>
+Entrega rápida • 100% discreto
+</p>
 
-<p style="color:#ff4fd8;font-weight:bold;">
+<p
+style="color:#ff4fd8;font-weight:bold;">
+
 🔥 Más de 100 clientes satisfechos en Cali
+
 </p>
 
 </header>
 
+
+<!-- HERO -->
+
 <div class="hero">
 
 <div class="badges">
+
 ✔ Entrega el mismo día<br>
+
 ✔ Empaque discreto<br>
+
 ✔ Pago contra entrega o transferencia
+
 </div>
 
 </div>
+
+
+<!-- PRODUCTOS -->
 
 <div class="grid">
+
 
 <!-- PRODUCTO 1 -->
 
 <div class="card">
 
-<div class="tag">🔥 HOT</div>
-
-<div class="img">
-<img src="gel500.png"
-     alt="Gel Lubricante 500ml"
-     onclick="ampliarImagen(this.src)"
-     style="cursor:pointer;">
+<div class="tag">
+🔥 HOT
 </div>
 
-<h3>Gel Lubricante 500ml</h3>
+<div class="img">
 
-<div class="old">$65.900</div>
-<div class="price">$59.900</div>
+<img
+src="gel500.png"
+alt="Gel Lubricante 500ml">
+
+</div>
+
+<h3>
+Gel Lubricante 500ml
+</h3>
+
+<div class="old">
+$65.900
+</div>
+
+<div class="price">
+$59.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Más vendido
 </p>
 
-<button onclick="agregarCarrito('Gel Lubricante 500ml',59900)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Gel Lubricante 500ml"
+data-precio="59900">
+
 🛒 Agregar al carrito
+
 </button>
 
-</a>
+<button
+onclick="comprarAhora(this)"
+data-nombre="Gel Lubricante 500ml"
+data-precio="59900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 2 -->
 
 <div class="card">
 
-<div class="tag">💧 ELIXIR</div>
-
-<div class="img">
-<img src="gel100.png" alt="Gel Lubricante 100ml">
+<div class="tag">
+💧 ELIXIR
 </div>
 
-<h3>Gel Lubricante 100ml</h3>
+<div class="img">
 
-<div class="old">$32.900</div>
-<div class="price">$29.900</div>
+<img
+src="gel100.png"
+alt="Gel Lubricante 100ml">
+
+</div>
+
+<h3>
+Gel Lubricante 100ml
+</h3>
+
+<div class="old">
+$32.900
+</div>
+
+<div class="price">
+$29.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Oferta limitada
 </p>
 
-<button onclick="agregarCarrito('Gel Lubricante 100ml',29900)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Gel Lubricante 100ml"
+data-precio="29900">
+
 🛒 Agregar al carrito
+
 </button>
- 
-</a>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Gel Lubricante 100ml"
+data-precio="29900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 3 -->
 
 <div class="card">
 
-<div class="tag">⚡ MINI</div>
-
-<div class="img">
-<img src="gel5.png" alt="Gel Lubricante 5ml">
+<div class="tag">
+⚡ MINI
 </div>
 
-<h3>Gel Lubricante 5ml</h3>
+<div class="img">
 
-<div class="old">$8.900</div>
-<div class="price">$5.900</div>
+<img
+src="gel5.png"
+alt="Gel Lubricante 5ml">
+
+</div>
+
+<h3>
+Gel Lubricante 5ml
+</h3>
+
+<div class="old">
+$8.900
+</div>
+
+<div class="price">
+$5.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Ideal para probar
 </p>
 
-<button onclick="agregarCarrito('Gel Lubricante 5ml',5900)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Gel Lubricante 5ml"
+data-precio="5900">
+
 🛒 Agregar al carrito
+
 </button>
-</a>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Gel Lubricante 5ml"
+data-precio="5900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 4 -->
 
 <div class="card">
 
-<div class="tag">💄 VIBRA</div>
-
-<div class="img">
-<img src="labial.png" alt="Labial Vibrador">
+<div class="tag">
+💄 VIBRA
 </div>
 
-<h3>Labial Vibrador</h3>
+<div class="img">
 
-<div class="old">$35.900</div>
-<div class="price">$30.000</div>
+<img
+src="labial.png"
+alt="Labial Vibrador">
+
+</div>
+
+<h3>
+Labial Vibrador
+</h3>
+
+<div class="old">
+$35.900
+</div>
+
+<div class="price">
+$30.000
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Súper discreto
 </p>
 
-<button onclick="agregarCarrito('Labial Vibrador',30000)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Labial Vibrador"
+data-precio="30000">
+
 🛒 Agregar al carrito
+
 </button>
-</a>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Labial Vibrador"
+data-precio="30000">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 5 -->
 
 <div class="card">
 
-<div class="tag">🔥 MULTI</div>
-
-<div class="img">
-<img src="sweetlove.png" alt="Lubricante Multiorgasmo">
+<div class="tag">
+🔥 MULTI
 </div>
 
-<h3>Lubricante Multiorgasmo</h3>
+<div class="img">
 
-<div class="old">$16.900</div>
-<div class="price">$11.900</div>
+<img
+src="sweetlove.png"
+alt="Lubricante Multiorgasmo">
+
+</div>
+
+<h3>
+Lubricante Multiorgasmo
+</h3>
+
+<div class="old">
+$16.900
+</div>
+
+<div class="price">
+$11.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sensación intensa
 </p>
 
-<button onclick="agregarCarrito('Lubricante Multiorgasmo',11900)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Multiorgasmo"
+data-precio="11900">
+
 🛒 Agregar al carrito
+
 </button>
-</a>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Multiorgasmo"
+data-precio="11900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 6 -->
 
 <div class="card">
 
-<div class="tag">💎 SILICONA</div>
-
-<div class="img">
-<img src="silicona.jpg" alt="Lubricante Silicona">
+<div class="tag">
+💎 SILICONA
 </div>
 
-<h3>Lubricante Silicona</h3>
+<div class="img">
 
-<div class="old">$55.900</div>
-<div class="price">$39.900</div>
+<img
+src="silicona.jpg"
+alt="Lubricante Silicona">
+
+</div>
+
+<h3>
+Lubricante Silicona
+</h3>
+
+<div class="old">
+$55.900
+</div>
+
+<div class="price">
+$39.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Mayor duración
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Lubricante%20Silicona" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Silicona"
+data-precio="39900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Silicona"
+data-precio="39900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 7 -->
 
 <div class="card">
 
-<div class="tag">🥃 HOT</div>
-
-<div class="img">
-<img src="whisky.png" alt="Lubricante Whisky">
+<div class="tag">
+🥃 HOT
 </div>
 
-<h3>Lubricante Whisky</h3>
+<div class="img">
 
-<div class="old">$34.900</div>
-<div class="price">$23.900</div>
+<img
+src="whisky.png"
+alt="Lubricante Whisky">
+
+</div>
+
+<h3>
+Lubricante Whisky
+</h3>
+
+<div class="old">
+$34.900
+</div>
+
+<div class="price">
+$23.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sensación caliente
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Lubricante%20Whisky" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Whisky"
+data-precio="23900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Whisky"
+data-precio="23900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 8 -->
 
 <div class="card">
 
-<div class="tag">🌹 ROSE</div>
-
-<div class="img">
-<img src="plugrose.png" alt="Plug Anal Rose">
+<div class="tag">
+🌹 ROSE
 </div>
 
-<h3>Plug Anal Rose</h3>
+<div class="img">
 
-<div class="old">$35.900</div>
-<div class="price">$29.900</div>
+<img
+src="plugrose.png"
+alt="Plug Anal Rose">
+
+</div>
+
+<h3>
+Plug Anal Rose
+</h3>
+
+<div class="old">
+$35.900
+</div>
+
+<div class="price">
+$29.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Elegante y premium
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Plug%20Rose" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Plug Anal Rose"
+data-precio="29900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Plug Anal Rose"
+data-precio="29900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 9 -->
 
 <div class="card">
 
-<div class="tag">⚡ POWER</div>
-
-<div class="img">
-<img src="powersex.png" alt="Power Sex Masculino">
+<div class="tag">
+⚡ POWER
 </div>
 
-<h3>Power Sex Masculino</h3>
+<div class="img">
 
-<div class="old">$10.900</div>
-<div class="price">$8.900</div>
+<img
+src="powersex.png"
+alt="Power Sex Masculino">
+
+</div>
+
+<h3>
+Power Sex Masculino
+</h3>
+
+<div class="old">
+$10.900
+</div>
+
+<div class="price">
+$8.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Muy solicitado
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Power%20Sex" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Power Sex Masculino"
+data-precio="8900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Power Sex Masculino"
+data-precio="8900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 10 -->
 
 <div class="card">
 
-<div class="tag">🦏 RHINO</div>
-
-<div class="img">
-<img src="rhino.png" alt="Rhino Dorado">
+<div class="tag">
+🦏 RHINO
 </div>
 
-<h3>Rhino Dorado</h3>
+<div class="img">
 
-<div class="old">$32.900</div>
-<div class="price">$20.900</div>
+<img
+src="rhino.png"
+alt="Rhino Dorado">
+
+</div>
+
+<h3>
+Rhino Dorado
+</h3>
+
+<div class="old">
+$32.900
+</div>
+
+<div class="price">
+$20.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Energía intensa
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Rhino%20Dorado" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Rhino Dorado"
+data-precio="20900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Rhino Dorado"
+data-precio="20900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 11 -->
 
 <div class="card">
 
-<div class="tag">💖 SATISFYER</div>
-
-<div class="img">
-<img src="satisfyer.png" alt="Satisfyer Love Breeze">
+<div class="tag">
+💖 SATISFYER
 </div>
 
-<h3>Satisfyer Love Breeze</h3>
+<div class="img">
 
-<div class="old">$300.900</div>
-<div class="price">$270.900</div>
+<img
+src="satisfyer.png"
+alt="Satisfyer Love Breeze">
+
+</div>
+
+<h3>
+Satisfyer Love Breeze
+</h3>
+
+<div class="old">
+$300.900
+</div>
+
+<div class="price">
+$270.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Producto premium
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Satisfyer" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Satisfyer Love Breeze"
+data-precio="270900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Satisfyer Love Breeze"
+data-precio="270900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 12 -->
 
 <div class="card">
 
-<div class="tag">🐰 CONEJO</div>
-
-<div class="img">
-<img src="conejo.png" alt="Vibrador Conejo">
+<div class="tag">
+🐰 CONEJO
 </div>
 
-<h3>Vibrador Conejo</h3>
+<div class="img">
 
-<div class="old">$80.900</div>
-<div class="price">$69.900</div>
+<img
+src="conejo.png"
+alt="Vibrador Conejo">
+
+</div>
+
+<h3>
+Vibrador Conejo
+</h3>
+
+<div class="old">
+$80.900
+</div>
+
+<div class="price">
+$69.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Doble estimulación
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Vibrador%20Conejo" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Vibrador Conejo"
+data-precio="69900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Vibrador Conejo"
+data-precio="69900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 13 -->
 
 <div class="card">
 
-<div class="tag">🔥 NUEVO</div>
-
-<div class="img">
-<img src="cfem.jpg" alt="Estimulante Femenino">
+<div class="tag">
+🔥 NUEVO
 </div>
 
-<h3>Estimulante Femenino</h3>
+<div class="img">
 
-<div class="old">$39.900</div>
-<div class="price">$7.900</div>
+<img
+src="cfem.jpg"
+alt="Estimulante Femenino">
+
+</div>
+
+<h3>
+Estimulante Femenino
+</h3>
+
+<div class="old">
+$39.900
+</div>
+
+<div class="price">
+$7.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Alta demanda
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Estimulante%20Femenino" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Estimulante Femenino"
+data-precio="7900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Estimulante Femenino"
+data-precio="7900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 14 -->
 
 <div class="card">
 
-<div class="tag">⚡ MINI</div>
-
-<div class="img">
-<img src="balita.jpg" alt="Balita Vibradora">
+<div class="tag">
+⚡ MINI
 </div>
 
-<h3>Balita Vibradora</h3>
+<div class="img">
 
-<div class="old">$63.900</div>
-<div class="price">$59.900</div>
+<img
+src="balita.jpg"
+alt="Balita Vibradora">
+
+</div>
+
+<h3>
+Balita Vibradora
+</h3>
+
+<div class="old">
+$63.900
+</div>
+
+<div class="price">
+$59.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Súper discreta
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20la%20Balita%20Vibradora" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Balita Vibradora"
+data-precio="59900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Balita Vibradora"
+data-precio="59900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 15 -->
 
 <div class="card">
 
-<div class="tag">💍 TOP</div>
-
-<div class="img">
-<img src="anillo.png" alt="Anillo Vibrador">
+<div class="tag">
+💍 TOP
 </div>
 
-<h3>Anillo Vibrador</h3>
+<div class="img">
 
-<div class="old">$16.900</div>
-<div class="price">$11.900</div>
+<img
+src="anillo.png"
+alt="Anillo Vibrador">
+
+</div>
+
+<h3>
+Anillo Vibrador
+</h3>
+
+<div class="old">
+$16.900
+</div>
+
+<div class="price">
+$11.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Más vendido
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Anillo%20Vibrador" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Anillo Vibrador"
+data-precio="11900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Anillo Vibrador"
+data-precio="11900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 16 -->
 
 <div class="card">
 
-<div class="tag">🔥 HOT</div>
-
-<div class="img">
-<img src="dildo.png" alt="Dildo Premium">
+<div class="tag">
+🔥 HOT
 </div>
 
-<h3>Dildo Premium</h3>
+<div class="img">
 
-<div class="old">$55.900</div>
-<div class="price">$49.900</div>
+<img
+src="dildo.png"
+alt="Dildo Premium">
+
+</div>
+
+<h3>
+Dildo Premium
+</h3>
+
+<div class="old">
+$55.900
+</div>
+
+<div class="price">
+$49.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Producto premium
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Dildo%20Premium" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Dildo Premium"
+data-precio="49900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Dildo Premium"
+data-precio="49900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
+
 <!-- PRODUCTO 17 -->
 
 <div class="card">
 
-<div class="tag">🔥 REALISTA</div>
-
-<div class="img">
-<img src="Dildo Realista Tulum.png" alt="Dildo Realista Tulum">
+<div class="tag">
+🔥 REALISTA
 </div>
 
-<h3>Dildo Realista Tulum</h3>
+<div class="img">
 
-<div class="old">$70.900</div>
-<div class="price">$59.900</div>
+<img
+src="Dildo Realista Tulum.png"
+alt="Dildo Realista Tulum">
+
+</div>
+
+<h3>
+Dildo Realista Tulum
+</h3>
+
+<div class="old">
+$70.900
+</div>
+
+<div class="price">
+$59.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sensación realista premium
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Dildo%20Realista%20Tulum" target="_blank">
+<div class="product-actions">
 
-<button>🔥 Pedir ahora</button>
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Dildo Realista Tulum"
+data-precio="59900">
 
-</a>
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Dildo Realista Tulum"
+data-precio="59900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
 
+</div>
 
 
 <!-- PRODUCTO 18 -->
 
 <div class="card">
 
-<div class="tag">💖 SWEET</div>
-
-<div class="img">
-<img src="Lubricante cremoso estrechante sweet love.png" alt="Lubricante Cremoso Estrechante Sweet Love">
+<div class="tag">
+💖 SWEET
 </div>
 
-<h3>Lubricante Estrechante Sweet Love</h3>
+<div class="img">
 
-<div class="old">$16.900</div>
-<div class="price">$11.900</div>
+<img
+src="Lubricante cremoso estrechante sweet love.png"
+alt="Lubricante Cremoso Estrechante Sweet Love">
+
+</div>
+
+<h3>
+Lubricante Estrechante Sweet Love
+</h3>
+
+<div class="old">
+$16.900
+</div>
+
+<div class="price">
+$11.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Mayor sensación
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Lubricante%20Estrechante%20Sweet%20Love" target="_blank">
+<div class="product-actions">
 
-<button>🔥 Pedir ahora</button>
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Estrechante Sweet Love"
+data-precio="11900">
 
-</a>
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Estrechante Sweet Love"
+data-precio="11900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
 
+</div>
 
 
 <!-- PRODUCTO 19 -->
 
 <div class="card">
 
-<div class="tag">⚡ ELIXIR</div>
-
-<div class="img">
-<img src="Lubricante Estrechante Friction Elixir x 15ml.png" alt="Lubricante Estrechante Friction Elixir">
+<div class="tag">
+⚡ ELIXIR
 </div>
 
-<h3>Friction Elixir 15ml</h3>
+<div class="img">
 
-<div class="old">$27.900</div>
-<div class="price">$23.900</div>
+<img
+src="Lubricante Estrechante Friction Elixir x 15ml.png"
+alt="Lubricante Estrechante Friction Elixir">
+
+</div>
+
+<h3>
+Friction Elixir 15ml
+</h3>
+
+<div class="old">
+$27.900
+</div>
+
+<div class="price">
+$23.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Más placer y sensación
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Friction%20Elixir%2015ml" target="_blank">
+<div class="product-actions">
 
-<button>🔥 Pedir ahora</button>
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Friction Elixir 15ml"
+data-precio="23900">
 
-</a>
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Friction Elixir 15ml"
+data-precio="23900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
 
+</div>
 
 
 <!-- PRODUCTO 20 -->
 
 <div class="card">
 
-<div class="tag">🍬 CHICLE</div>
-
-<div class="img">
-<img src="chicle.png" alt="Lubricante Chicle">
+<div class="tag">
+🍬 CHICLE
 </div>
 
-<h3>Lubricante Chicle 30ml</h3>
+<div class="img">
 
-<div class="old">$29.900</div>
-<div class="price">$23.900</div>
+<img
+src="chicle.png"
+alt="Lubricante Chicle">
+
+</div>
+
+<h3>
+Lubricante Chicle 30ml
+</h3>
+
+<div class="old">
+$29.900
+</div>
+
+<div class="price">
+$23.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sabor intenso
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Lubricante%20Chicle%2030ml" target="_blank">
+<div class="product-actions">
 
-<button>🔥 Pedir ahora</button>
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Chicle 30ml"
+data-precio="23900">
 
-</a>
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Chicle 30ml"
+data-precio="23900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
 
+</div>
 
 
 <!-- PRODUCTO 21 -->
 
 <div class="card">
 
-<div class="tag">🍓 FRESA</div>
-
-<div class="img">
-<img src="fresabombon.png" alt="Lubricante Fresa Bombón">
+<div class="tag">
+🍓 FRESA
 </div>
 
-<h3>Lubricante Fresa Bombón</h3>
+<div class="img">
 
-<div class="old">$29.900</div>
-<div class="price">$23.900</div>
+<img
+src="fresabombon.png"
+alt="Lubricante Fresa Bombón">
+
+</div>
+
+<h3>
+Lubricante Fresa Bombón
+</h3>
+
+<div class="old">
+$29.900
+</div>
+
+<div class="price">
+$23.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Aroma y sensación caliente
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Lubricante%20Fresa%20Bombon" target="_blank">
+<div class="product-actions">
 
-<button>🔥 Pedir ahora</button>
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Fresa Bombón"
+data-precio="23900">
 
-</a>
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Fresa Bombón"
+data-precio="23900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
+
 <!-- PRODUCTO 22 -->
 
 <div class="card">
 
-<div class="tag">🔥 EUFORIA</div>
-
-<div class="img">
-<img src="Aceite Euforia.png" alt="Aceite Euforia">
+<div class="tag">
+🔥 EUFORIA
 </div>
 
-<h3>Aceite Euforia</h3>
+<div class="img">
 
-<div class="old">$20.900</div>
-<div class="price">$17.900</div>
+<img
+src="Aceite Euforia.png"
+alt="Aceite Euforia">
+
+</div>
+
+<h3>
+Aceite Euforia
+</h3>
+
+<div class="old">
+$20.900
+</div>
+
+<div class="price">
+$17.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sensación relajante
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Aceite%20Euforia" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Aceite Euforia"
+data-precio="17900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Aceite Euforia"
+data-precio="17900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 23 -->
 
 <div class="card">
 
-<div class="tag">💎 DIAMANTE</div>
-
-<div class="img">
-<img src="Bala Punto Diamante.png" alt="Bala Punto Diamante">
+<div class="tag">
+💎 DIAMANTE
 </div>
 
-<h3>Bala Punto Diamante</h3>
+<div class="img">
 
-<div class="old">$35.900</div>
-<div class="price">$30.900</div>
+<img
+src="Bala Punto Diamante.png"
+alt="Bala Punto Diamante">
+
+</div>
+
+<h3>
+Bala Punto Diamante
+</h3>
+
+<div class="old">
+$35.900
+</div>
+
+<div class="price">
+$30.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Discreta y potente
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20la%20Bala%20Punto%20Diamante" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Bala Punto Diamante"
+data-precio="30900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Bala Punto Diamante"
+data-precio="30900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 24 -->
 
 <div class="card">
 
-<div class="tag">❄️ COOL</div>
-
-<div class="img">
-<img src="Lubricante intimo Frio Cool Sensation Elixir x 30ml.png" alt="Cool Sensation Elixir">
+<div class="tag">
+❄️ COOL
 </div>
 
-<h3>Cool Sensation Elixir 30ml</h3>
+<div class="img">
 
-<div class="old">$25.900</div>
-<div class="price">$23.900</div>
+<img
+src="Lubricante intimo Frio Cool Sensation Elixir x 30ml.png"
+alt="Cool Sensation Elixir">
+
+</div>
+
+<h3>
+Cool Sensation Elixir 30ml
+</h3>
+
+<div class="old">
+$25.900
+</div>
+
+<div class="price">
+$23.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sensación refrescante
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Cool%20Sensation%20Elixir%2030ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Cool Sensation Elixir 30ml"
+data-precio="23900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Cool Sensation Elixir 30ml"
+data-precio="23900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 25 -->
 
 <div class="card">
 
-<div class="tag">💖 SATISFYER</div>
-
-<div class="img">
-<img src="Satisfyer Classic Blossom.png" alt="Satisfyer Pro 2 Classic Blossom">
+<div class="tag">
+💖 SATISFYER
 </div>
 
-<h3>Satisfyer Pro 2 Classic Blossom</h3>
+<div class="img">
 
-<div class="old">$190.900</div>
-<div class="price">$182.900</div>
+<img
+src="Satisfyer Classic Blossom.png"
+alt="Satisfyer Pro 2 Classic Blossom">
+
+</div>
+
+<h3>
+Satisfyer Pro 2 Classic Blossom
+</h3>
+
+<div class="old">
+$190.900
+</div>
+
+<div class="price">
+$182.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Tecnología Liquid Air
@@ -1035,7 +2430,11 @@ color:#ccc;
 line-height:1.5;
 margin-top:10px;
 ">
-Diseño romántico y elegante con tecnología <strong>Liquid Air</strong> y ondas de presión sin contacto que estimulan el clítoris de forma suave, intensa y placentera.
+
+Diseño romántico y elegante con tecnología
+<strong>Liquid Air</strong>
+y ondas de presión sin contacto que estimulan el clítoris de forma suave, intensa y placentera.
+
 </p>
 
 <ul style="
@@ -1045,992 +2444,2185 @@ font-size:13px;
 line-height:1.6;
 padding-left:18px;
 ">
+
 <li>✔ Tecnología Liquid Air</li>
 <li>✔ Estimulación sin contacto</li>
 <li>✔ Diseño ergonómico</li>
 <li>✔ Silencioso y discreto</li>
 <li>✔ Material suave al tacto</li>
+
 </ul>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Satisfyer%20Pro%202%20Classic%20Blossom" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
 
-<button onclick="mostrarInfo('classicblossom')">
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Satisfyer Pro 2 Classic Blossom"
+data-precio="182900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Satisfyer Pro 2 Classic Blossom"
+data-precio="182900">
+
+⚡ Comprar ahora
+
+</button>
+
+<button
+onclick="mostrarInfo('classicblossom')">
+
 ℹ️ Ver detalles
+
 </button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 26 -->
 
 <div class="card">
 
-<div class="tag">💖 SATISFYER</div>
-
-<div class="img">
-<img src="Satisfyer Uno.png" alt="Satisfyer Uno">
+<div class="tag">
+💖 SATISFYER
 </div>
 
-<h3>Satisfyer Uno</h3>
+<div class="img">
 
-<div class="old">$150.900</div>
-<div class="price">$140.900</div>
+<img
+src="Satisfyer Uno.png"
+alt="Satisfyer Uno">
+
+</div>
+
+<h3>
+Satisfyer Uno
+</h3>
+
+<div class="old">
+$150.900
+</div>
+
+<div class="price">
+$140.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Compacto y elegante
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Satisfyer%20Uno" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Satisfyer Uno"
+data-precio="140900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Satisfyer Uno"
+data-precio="140900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 27 -->
 
 <div class="card">
 
-<div class="tag">⚡ SUCCIONADOR</div>
-
-<div class="img">
-<img src="Succionador pequeno de pilas.png" alt="Succionador pequeño de pilas">
+<div class="tag">
+⚡ SUCCIONADOR
 </div>
 
-<h3>Succionador Pequeño de Pilas</h3>
+<div class="img">
 
-<div class="old">$80.900</div>
-<div class="price">$69.900</div>
+<img
+src="Succionador pequeno de pilas.png"
+alt="Succionador pequeño de pilas">
+
+</div>
+
+<h3>
+Succionador Pequeño de Pilas
+</h3>
+
+<div class="old">
+$80.900
+</div>
+
+<div class="price">
+$69.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Compacto y discreto
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Succionador%20Pequeño%20de%20Pilas" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
 
-</div>  
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Succionador Pequeño de Pilas"
+data-precio="69900">
 
- <!-- PRODUCTO 28 -->
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Succionador Pequeño de Pilas"
+data-precio="69900">
+
+⚡ Comprar ahora
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTO 28 -->
 
 <div class="card">
 
-<div class="tag">🚿 HIGIENE</div>
-
-<div class="img">
-<img src="Ducha Anal Talla M.png" alt="Ducha Anal Talla M" loading="lazy">
+<div class="tag">
+🚿 HIGIENE
 </div>
 
-<h3>Ducha Anal Talla M</h3>
+<div class="img">
 
-<div class="old">$32.900</div>
-<div class="price">$29.900</div>
+<img
+src="Ducha Anal Talla M.png"
+alt="Ducha Anal Talla M">
+
+</div>
+
+<h3>
+Ducha Anal Talla M
+</h3>
+
+<div class="old">
+$32.900
+</div>
+
+<div class="price">
+$29.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Ideal para higiene íntima
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20la%20Ducha%20Anal%20Talla%20M" target="_blank">
+<div class="product-actions">
 
-<button>🔥 Pedir ahora</button>
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Ducha Anal Talla M"
+data-precio="29900">
 
-</a>
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Ducha Anal Talla M"
+data-precio="29900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 29 -->
 
 <div class="card">
 
-<div class="tag">⚡ RECARGABLE</div>
-
-<div class="img">
-<img src="Succionador Recargable Intense.png" alt="Succionador Recargable Intense" loading="lazy">
+<div class="tag">
+⚡ RECARGABLE
 </div>
 
-<h3>Succionador Recargable Intense</h3>
+<div class="img">
 
-<div class="old">$125.900</div>
-<div class="price">$119.900</div>
+<img
+src="Succionador Recargable Intense.png"
+alt="Succionador Recargable Intense">
+
+</div>
+
+<h3>
+Succionador Recargable Intense
+</h3>
+
+<div class="old">
+$125.900
+</div>
+
+<div class="price">
+$119.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Potente y silencioso
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Succionador%20Recargable%20Intense" target="_blank">
+<div class="product-actions">
 
-<button>🔥 Pedir ahora</button>
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Succionador Recargable Intense"
+data-precio="119900">
 
-</a>
+🛒 Agregar al carrito
 
-</div> 
+</button>
 
- <!-- PRODUCTO 30 -->
+<button
+onclick="comprarAhora(this)"
+data-nombre="Succionador Recargable Intense"
+data-precio="119900">
+
+⚡ Comprar ahora
+
+</button>
+
+</div>
+
+</div>
+
+
+<!-- PRODUCTO 30 -->
 
 <div class="card">
 
-<div class="tag">🔗 BDSM</div>
-
-<div class="img">
-<img src="Esposas sencillas terciopelo.png" alt="Esposas Sencillas Terciopelo">
+<div class="tag">
+🔗 BDSM
 </div>
 
-<h3>Esposas Sencillas Terciopelo</h3>
+<div class="img">
 
-<div class="old">$25.900</div>
-<div class="price">$20.900</div>
+<img
+src="Esposas sencillas terciopelo.png"
+alt="Esposas Sencillas Terciopelo">
+
+</div>
+
+<h3>
+Esposas Sencillas Terciopelo
+</h3>
+
+<div class="old">
+$25.900
+</div>
+
+<div class="price">
+$20.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Suaves y cómodas
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20las%20Esposas%20Sencillas%20Terciopelo" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Esposas Sencillas Terciopelo"
+data-precio="20900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Esposas Sencillas Terciopelo"
+data-precio="20900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 31 -->
 
 <div class="card">
 
-<div class="tag">💎 JOYA</div>
-
-<div class="img">
-<img src="Plug acostumbrador Joya Silicona Talla M.png" alt="Plug Acostumbrador Joya Silicona Talla M">
+<div class="tag">
+💎 JOYA
 </div>
 
-<h3>Plug Joya Silicona Talla M</h3>
+<div class="img">
 
-<div class="old">$35.900</div>
-<div class="price">$29.900</div>
+<img
+src="Plug acostumbrador Joya Silicona Talla M.png"
+alt="Plug Acostumbrador Joya Silicona Talla M">
+
+</div>
+
+<h3>
+Plug Joya Silicona Talla M
+</h3>
+
+<div class="old">
+$35.900
+</div>
+
+<div class="price">
+$29.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Elegante y cómodo
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Plug%20Joya%20Silicona%20Talla%20M" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Plug Joya Silicona Talla M"
+data-precio="29900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Plug Joya Silicona Talla M"
+data-precio="29900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 32 -->
 
 <div class="card">
 
-<div class="tag">🥚 EGG</div>
-
-<div class="img">
-<img src="Huevo vibrador Egg.png" alt="Huevo Vibrador Egg">
+<div class="tag">
+🥚 EGG
 </div>
 
-<h3>Huevo Vibrador Egg</h3>
+<div class="img">
 
-<div class="old">$130.900</div>
-<div class="price">$120.900</div>
+<img
+src="Huevo vibrador Egg.png"
+alt="Huevo Vibrador Egg">
+
+</div>
+
+<h3>
+Huevo Vibrador Egg
+</h3>
+
+<div class="old">
+$130.900
+</div>
+
+<div class="price">
+$120.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Vibración intensa
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Huevo%20Vibrador%20Egg" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Huevo Vibrador Egg"
+data-precio="120900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Huevo Vibrador Egg"
+data-precio="120900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 33 -->
 
 <div class="card">
 
-<div class="tag">⚡ ELIXIR</div>
-
-<div class="img">
-<img src="Lubricante Estrechante Friction Elixir x 30ml.png" alt="Lubricante Estrechante Friction Elixir 30ml">
+<div class="tag">
+⚡ ELIXIR
 </div>
 
-<h3>Friction Elixir 30ml</h3>
+<div class="img">
 
-<div class="old">$38.900</div>
-<div class="price">$36.900</div>
+<img
+src="Lubricante Estrechante Friction Elixir x 30ml.png"
+alt="Lubricante Estrechante Friction Elixir 30ml">
+
+</div>
+
+<h3>
+Friction Elixir 30ml
+</h3>
+
+<div class="old">
+$38.900
+</div>
+
+<div class="price">
+$36.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sensación intensa
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Friction%20Elixir%2030ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Friction Elixir 30ml"
+data-precio="36900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Friction Elixir 30ml"
+data-precio="36900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 34 -->
 
 <div class="card">
 
-<div class="tag">🔥 SEN</div>
-
-<div class="img">
-<img src="Lubricante Intimo Multiorgasmos Sen (30 ml).png" alt="Lubricante Intimo Multiorgasmos Sen">
+<div class="tag">
+🔥 SEN
 </div>
 
-<h3>Multiorgasmos Sen 30ml</h3>
+<div class="img">
 
-<div class="old">$38.900</div>
-<div class="price">$36.900</div>
+<img
+src="Lubricante Intimo Multiorgasmos Sen (30 ml).png"
+alt="Lubricante Intimo Multiorgasmos Sen">
+
+</div>
+
+<h3>
+Multiorgasmos Sen 30ml
+</h3>
+
+<div class="old">
+$38.900
+</div>
+
+<div class="price">
+$36.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Estimulación intensa
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Multiorgasmos%20Sen%2030ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Multiorgasmos Sen 30ml"
+data-precio="36900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Multiorgasmos Sen 30ml"
+data-precio="36900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 35 -->
 
 <div class="card">
 
-<div class="tag">🍑 ANAL</div>
-
-<div class="img">
-<img src="Lubricante cremoso anal sweet love.png" alt="Lubricante Cremoso Anal Sweet Love">
+<div class="tag">
+🍑 ANAL
 </div>
 
-<h3>Sweet Love Anal</h3>
+<div class="img">
 
-<div class="old">$15.900</div>
-<div class="price">$12.900</div>
+<img
+src="Lubricante cremoso anal sweet love.png"
+alt="Lubricante Cremoso Anal Sweet Love">
+
+</div>
+
+<h3>
+Sweet Love Anal
+</h3>
+
+<div class="old">
+$15.900
+</div>
+
+<div class="price">
+$12.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Textura cremosa
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Sweet%20Love%20Anal" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Sweet Love Anal"
+data-precio="12900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Sweet Love Anal"
+data-precio="12900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 36 -->
 
 <div class="card">
 
-<div class="tag">💧 ANAL</div>
-
-<div class="img">
-<img src="Lubricante Intimo Anal Elixir x 30ml.png" alt="Lubricante Intimo Anal Elixir 30ml">
+<div class="tag">
+💧 ANAL
 </div>
 
-<h3>Anal Elixir 30ml</h3>
+<div class="img">
 
-<div class="old">$35.900</div>
-<div class="price">$32.900</div>
+<img
+src="Lubricante Intimo Anal Elixir x 30ml.png"
+alt="Lubricante Intimo Anal Elixir 30ml">
+
+</div>
+
+<h3>
+Anal Elixir 30ml
+</h3>
+
+<div class="old">
+$35.900
+</div>
+
+<div class="price">
+$32.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Mayor comodidad
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Anal%20Elixir%2030ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Anal Elixir 30ml"
+data-precio="32900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Anal Elixir 30ml"
+data-precio="32900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
+
 <!-- PRODUCTO 37 -->
 
 <div class="card">
 
-<div class="tag">🧼 HIGIENE</div>
-
-<div class="img">
-<img src="Limpiador de Juguetes Neutro Elixir x 30ml.png" alt="Limpiador de Juguetes Neutro Elixir 30ml">
+<div class="tag">
+🧼 HIGIENE
 </div>
 
-<h3>Limpiador de Juguetes Neutro Elixir 30ml</h3>
+<div class="img">
 
-<div class="old">$25.900</div>
-<div class="price">$11.900</div>
+<img
+src="Limpiador de Juguetes Neutro Elixir x 30ml.png"
+alt="Limpiador de Juguetes Neutro Elixir 30ml">
+
+</div>
+
+<h3>
+Limpiador de Juguetes Neutro Elixir 30ml
+</h3>
+
+<div class="old">
+$25.900
+</div>
+
+<div class="price">
+$11.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Limpieza segura
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Limpiador%20de%20Juguetes%20Neutro%20Elixir%2030ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Limpiador de Juguetes Neutro Elixir 30ml"
+data-precio="11900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Limpiador de Juguetes Neutro Elixir 30ml"
+data-precio="11900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 38 -->
 
 <div class="card">
 
-<div class="tag">🧼 ELIXIR</div>
-
-<div class="img">
-<img src="Limpiador de Juguetes Neutro Elixir x 250ml.png" alt="Limpiador de Juguetes Neutro Elixir 250ml">
+<div class="tag">
+🧼 ELIXIR
 </div>
 
-<h3>Limpiador de Juguetes Neutro Elixir 250ml</h3>
+<div class="img">
 
-<div class="old">$37.900</div>
-<div class="price">$33.900</div>
+<img
+src="Limpiador de Juguetes Neutro Elixir x 250ml.png"
+alt="Limpiador de Juguetes Neutro Elixir 250ml">
+
+</div>
+
+<h3>
+Limpiador de Juguetes Neutro Elixir 250ml
+</h3>
+
+<div class="old">
+$37.900
+</div>
+
+<div class="price">
+$33.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Mayor rendimiento
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Limpiador%20de%20Juguetes%20Neutro%20Elixir%20250ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Limpiador de Juguetes Neutro Elixir 250ml"
+data-precio="33900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Limpiador de Juguetes Neutro Elixir 250ml"
+data-precio="33900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 39 -->
 
 <div class="card">
 
-<div class="tag">💖 LENCERÍA</div>
+<div class="tag">
+💖 LENCERÍA
+</div>
 
 <div class="img">
-<img src="Conjunto Tamara.png"
-alt="Conjunto Tamara"
-style="cursor:zoom-in;"
-onclick="ampliarImagen(this.src)">
+
+<img
+src="Conjunto Tamara.png"
+alt="Conjunto Tamara">
 
 </div>
 
-<h3>Conjunto Tamara</h3>
+<h3>
+Conjunto Tamara
+</h3>
 
-<div class="old">$70.900</div>
-<div class="price">$67.900</div>
+<div class="old">
+$70.900
+</div>
+
+<div class="price">
+$67.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Elegante y cómodo
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Conjunto%20Tamara" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Conjunto Tamara"
+data-precio="67900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Conjunto Tamara"
+data-precio="67900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 40 -->
 
 <div class="card">
 
-<div class="tag">🎀 LIGUERO</div>
+<div class="tag">
+🎀 LIGUERO
+</div>
 
 <div class="img">
-<img src="Conjunto Liguero Moños Fucsia.png"
-alt="Conjunto Liguero Moños Fucsia"
-style="cursor:zoom-in;"
-onclick="ampliarImagen(this.src)">
+
+<img
+src="Conjunto Liguero Moños Fucsia.png"
+alt="Conjunto Liguero Moños Fucsia">
 
 </div>
 
-<h3>Conjunto Liguero Moños Fucsia</h3>
+<h3>
+Conjunto Liguero Moños Fucsia
+</h3>
 
-<div class="old">$71.900</div>
-<div class="price">$64.900</div>
+<div class="old">
+$71.900
+</div>
+
+<div class="price">
+$64.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Muy solicitado
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Conjunto%20Liguero%20Moños%20Fucsia" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Conjunto Liguero Moños Fucsia"
+data-precio="64900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Conjunto Liguero Moños Fucsia"
+data-precio="64900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 41 -->
 
 <div class="card">
 
-<div class="tag">👩‍⚕️ DISFRAZ</div>
+<div class="tag">
+👩‍⚕️ DISFRAZ
+</div>
 
 <div class="img">
-<img src="Disfraz enfermera sexy.png"
-alt="Disfraz Enfermera Sexy"
-style="cursor:zoom-in;"
-onclick="ampliarImagen(this.src)">
+
+<img
+src="Disfraz enfermera sexy.png"
+alt="Disfraz Enfermera Sexy">
 
 </div>
 
-<h3>Disfraz Enfermera</h3>
+<h3>
+Disfraz Enfermera
+</h3>
 
-<div class="old">$75.900</div>
-<div class="price">$70.900</div>
+<div class="old">
+$75.900
+</div>
+
+<div class="price">
+$70.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Edición especial
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Disfraz%20Enfermera" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Disfraz Enfermera"
+data-precio="70900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Disfraz Enfermera"
+data-precio="70900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 42 -->
 
 <div class="card">
 
-<div class="tag">🐰 DISFRAZ</div>
+<div class="tag">
+🐰 DISFRAZ
+</div>
 
 <div class="img">
-<img src="Disfraz conejita brillos.png"
-alt="Disfraz Conejita Brillos"
-style="cursor:zoom-in;"
-onclick="ampliarImagen(this.src)">
+
+<img
+src="Disfraz conejita brillos.png"
+alt="Disfraz Conejita Brillos">
 
 </div>
 
-<h3>Disfraz Conejita Brillos</h3>
+<h3>
+Disfraz Conejita Brillos
+</h3>
 
-<div class="old">$68.900</div>
-<div class="price">$66.900</div>
+<div class="old">
+$68.900
+</div>
+
+<div class="price">
+$66.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Brillante y elegante
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Disfraz%20Conejita%20Brillos" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Disfraz Conejita Brillos"
+data-precio="66900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Disfraz Conejita Brillos"
+data-precio="66900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 43 -->
 
 <div class="card">
 
-<div class="tag">🦄 VIBRADOR</div>
-
-<div class="img">
-<img
-src="Corcel Rosado.png"
-alt="Corcel Rosado"
-style="cursor:zoom-in;"
-onclick="ampliarImagen(this.src)">
+<div class="tag">
+🦄 VIBRADOR
 </div>
 
-<h3>Corcel Rosado</h3>
+<div class="img">
 
-<div class="old">$110.900</div>
-<div class="price">$99.900</div>
+<img
+src="Corcel Rosado.png"
+alt="Corcel Rosado">
+
+</div>
+
+<h3>
+Corcel Rosado
+</h3>
+
+<div class="old">
+$110.900
+</div>
+
+<div class="price">
+$99.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Potente y elegante
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Corcel%20Rosado" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Corcel Rosado"
+data-precio="99900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Corcel Rosado"
+data-precio="99900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 44 -->
 
 <div class="card">
 
-<div class="tag">❤️ LIGUERO</div>
+<div class="tag">
+❤️ LIGUERO
+</div>
 
 <div class="img">
-<img src="Conjunto liguero Rojo.png"
-alt="Conjunto Liguero Rojo"
-style="cursor:zoom-in;"
-onclick="ampliarImagen(this.src)">
+
+<img
+src="Conjunto liguero Rojo.png"
+alt="Conjunto Liguero Rojo">
 
 </div>
 
-<h3>Conjunto Liguero Rojo</h3>
+<h3>
+Conjunto Liguero Rojo
+</h3>
 
-<div class="old">$72.900</div>
-<div class="price">$69.900</div>
+<div class="old">
+$72.900
+</div>
+
+<div class="price">
+$69.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Elegancia y sensualidad
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Conjunto%20Liguero%20Rojo" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Conjunto Liguero Rojo"
+data-precio="69900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Conjunto Liguero Rojo"
+data-precio="69900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
 
- <!-- PRODUCTO 45 -->
+</div>
+
+
+<!-- PRODUCTO 45 -->
 
 <div class="card">
 
-<div class="tag">⚡ SEN</div>
-
-<div class="img">
-<img src="Lubricante intimo Multiorgasmos Sen (10 ml).png" alt="Lubricante Multiorgasmos Sen 10ml">
+<div class="tag">
+⚡ SEN
 </div>
 
-<h3>Multiorgasmos Sen 10ml</h3>
+<div class="img">
 
-<div class="old">$27.900</div>
-<div class="price">$25.000</div>
+<img
+src="Lubricante intimo Multiorgasmos Sen (10 ml).png"
+alt="Lubricante Multiorgasmos Sen 10ml">
+
+</div>
+
+<h3>
+Multiorgasmos Sen 10ml
+</h3>
+
+<div class="old">
+$27.900
+</div>
+
+<div class="price">
+$25.000
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Tamaño práctico
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Multiorgasmos%20Sen%2010ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Multiorgasmos Sen 10ml"
+data-precio="25000">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Multiorgasmos Sen 10ml"
+data-precio="25000">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 46 -->
 
 <div class="card">
 
-<div class="tag">💎 BALA</div>
-
-<div class="img">
-<img src="Vibrador Pilot Bala.png" alt="Vibrador Pilot Bala">
+<div class="tag">
+💎 BALA
 </div>
 
-<h3>Vibrador Pilot Bala</h3>
+<div class="img">
 
-<div class="old">$45.900</div>
-<div class="price">$39.900</div>
+<img
+src="Vibrador Pilot Bala.png"
+alt="Vibrador Pilot Bala">
+
+</div>
+
+<h3>
+Vibrador Pilot Bala
+</h3>
+
+<div class="old">
+$45.900
+</div>
+
+<div class="price">
+$39.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Compacto y potente
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Vibrador%20Pilot%20Bala" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Vibrador Pilot Bala"
+data-precio="39900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Vibrador Pilot Bala"
+data-precio="39900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 47 -->
 
 <div class="card">
 
-<div class="tag">🔥 REALISTA</div>
-
-<div class="img">
-<img src="Vibrador de Silicona TPE Piel.png" alt="Vibrador de Silicona TPE">
+<div class="tag">
+🔥 REALISTA
 </div>
 
-<h3>Vibrador Silicona TPE</h3>
+<div class="img">
 
-<div class="old">$55.900</div>
-<div class="price">$49.900</div>
+<img
+src="Vibrador de Silicona TPE Piel.png"
+alt="Vibrador de Silicona TPE">
+
+</div>
+
+<h3>
+Vibrador Silicona TPE
+</h3>
+
+<div class="old">
+$55.900
+</div>
+
+<div class="price">
+$49.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Textura suave realista
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Vibrador%20Silicona%20TPE" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Vibrador Silicona TPE"
+data-precio="49900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Vibrador Silicona TPE"
+data-precio="49900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 48 -->
 
 <div class="card">
 
-<div class="tag">⏳ RETARDANTE</div>
-
-<div class="img">
-<img src="Lubricante cremoso retardante Sweet love.png" alt="Lubricante Retardante Sweet Love">
+<div class="tag">
+⏳ RETARDANTE
 </div>
 
-<h3>Sweet Love Retardante</h3>
+<div class="img">
 
-<div class="old">$16.900</div>
-<div class="price">$12.000</div>
+<img
+src="Lubricante cremoso retardante Sweet love.png"
+alt="Lubricante Retardante Sweet Love">
+
+</div>
+
+<h3>
+Sweet Love Retardante
+</h3>
+
+<div class="old">
+$16.900
+</div>
+
+<div class="price">
+$12.000
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Mayor duración
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Sweet%20Love%20Retardante" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Sweet Love Retardante"
+data-precio="12000">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Sweet Love Retardante"
+data-precio="12000">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 49 -->
 
 <div class="card">
 
-<div class="tag">⚡ ELECTRO</div>
-
-<div class="img">
-<img src="Lubricante Multiorgasmos Electrizante x5ml.png" alt="Multiorgasmos Electrizante">
+<div class="tag">
+⚡ ELECTRO
 </div>
 
-<h3>Multiorgasmos Electrizante 5ml</h3>
+<div class="img">
 
-<div class="old">$42.900</div>
-<div class="price">$38.900</div>
+<img
+src="Lubricante Multiorgasmos Electrizante x5ml.png"
+alt="Multiorgasmos Electrizante">
+
+</div>
+
+<h3>
+Multiorgasmos Electrizante 5ml
+</h3>
+
+<div class="old">
+$42.900
+</div>
+
+<div class="price">
+$38.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sensación intensa
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Multiorgasmos%20Electrizante%205ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Multiorgasmos Electrizante 5ml"
+data-precio="38900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Multiorgasmos Electrizante 5ml"
+data-precio="38900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 50 -->
 
 <div class="card">
 
-<div class="tag">❄️🔥 FRÍO CALOR</div>
-
-<div class="img">
-<img src="Lubricante Multiorgasmo Frio Calor.png" alt="Lubricante Frío Calor">
+<div class="tag">
+❄️🔥 FRÍO CALOR
 </div>
 
-<h3>Lubricante Frío Calor</h3>
+<div class="img">
 
-<div class="old">$38.900</div>
-<div class="price">$36.900</div>
+<img
+src="Lubricante Multiorgasmo Frio Calor.png"
+alt="Lubricante Frío Calor">
+
+</div>
+
+<h3>
+Lubricante Frío Calor
+</h3>
+
+<div class="old">
+$38.900
+</div>
+
+<div class="price">
+$36.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Doble sensación
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Lubricante%20Frio%20Calor" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Frío Calor"
+data-precio="36900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Frío Calor"
+data-precio="36900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 51 -->
 
 <div class="card">
 
-<div class="tag">❄️ MENTA</div>
-
-<div class="img">
-<img src="Lubricante Intimo Menta Fria sen 30ml.png" alt="Menta Fría Sen">
+<div class="tag">
+❄️ MENTA
 </div>
 
-<h3>Menta Fría Sen 30ml</h3>
+<div class="img">
 
-<div class="old">$27.900</div>
-<div class="price">$24.900</div>
+<img
+src="Lubricante Intimo Menta Fria sen 30ml.png"
+alt="Menta Fría Sen">
+
+</div>
+
+<h3>
+Menta Fría Sen 30ml
+</h3>
+
+<div class="old">
+$27.900
+</div>
+
+<div class="price">
+$24.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sensación refrescante
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Menta%20Fria%20Sen%2030ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Menta Fría Sen 30ml"
+data-precio="24900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Menta Fría Sen 30ml"
+data-precio="24900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 52 -->
 
 <div class="card">
 
-<div class="tag">📳 INALÁMBRICO</div>
-
-<div class="img">
-<img src="Huevo Inalambrico Spark of Love 10 funciones.png" alt="Huevo Inalámbrico Spark of Love">
+<div class="tag">
+📳 INALÁMBRICO
 </div>
 
-<h3>Huevo Spark of Love</h3>
+<div class="img">
 
-<div class="old">$100.900</div>
-<div class="price">$90.900</div>
+<img
+src="Huevo Inalambrico Spark of Love 10 funciones.png"
+alt="Huevo Inalámbrico Spark of Love">
+
+</div>
+
+<h3>
+Huevo Spark of Love
+</h3>
+
+<div class="old">
+$100.900
+</div>
+
+<div class="price">
+$90.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 10 funciones
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Huevo%20Spark%20of%20Love" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Huevo Spark of Love"
+data-precio="90900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Huevo Spark of Love"
+data-precio="90900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 53 -->
 
 <div class="card">
 
-<div class="tag">💖 WOMAN</div>
-
-<div class="img">
-<img src="Feromonas Concentradas Woman Rollon.png" alt="Feromonas Woman">
+<div class="tag">
+💖 WOMAN
 </div>
 
-<h3>Feromonas Woman Roll On</h3>
+<div class="img">
 
-<div class="old">$45.900</div>
-<div class="price">$39.900</div>
+<img
+src="Feromonas Concentradas Woman Rollon.png"
+alt="Feromonas Woman">
+
+</div>
+
+<h3>
+Feromonas Woman Roll On
+</h3>
+
+<div class="old">
+$45.900
+</div>
+
+<div class="price">
+$39.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Aroma irresistible
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20las%20Feromonas%20Woman" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Feromonas Woman Roll On"
+data-precio="39900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Feromonas Woman Roll On"
+data-precio="39900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 54 -->
 
 <div class="card">
 
-<div class="tag">👑 FANTASÍA</div>
-
-<div class="img">
-<img src="Antifaz Princess.png" alt="Antifaz Princess">
+<div class="tag">
+👑 FANTASÍA
 </div>
 
-<h3>Antifaz Princess</h3>
+<div class="img">
 
-<div class="old">$18.900</div>
-<div class="price">$15.900</div>
+<img
+src="Antifaz Princess.png"
+alt="Antifaz Princess">
+
+</div>
+
+<h3>
+Antifaz Princess
+</h3>
+
+<div class="old">
+$18.900
+</div>
+
+<div class="price">
+$15.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Toque elegante
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Antifaz%20Princess" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Antifaz Princess"
+data-precio="15900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Antifaz Princess"
+data-precio="15900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 55 -->
 
 <div class="card">
 
-<div class="tag">🍭 BLOW POP</div>
-
-<div class="img">
-<img src="Blow Pop Elixir.png" alt="Blow Pop Elixir">
+<div class="tag">
+🍭 BLOW POP
 </div>
 
-<h3>Blow Pop Elixir</h3>
+<div class="img">
 
-<div class="old">$6.900</div>
-<div class="price">$4.900</div>
+<img
+src="Blow Pop Elixir.png"
+alt="Blow Pop Elixir">
+
+</div>
+
+<h3>
+Blow Pop Elixir
+</h3>
+
+<div class="old">
+$6.900
+</div>
+
+<div class="price">
+$4.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Muy solicitado
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Blow%20Pop%20Elixir" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Blow Pop Elixir"
+data-precio="4900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Blow Pop Elixir"
+data-precio="4900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 56 -->
 
 <div class="card">
 
-<div class="tag">💎 ESTRECHANTE</div>
-
-<div class="img">
-<img src="Lubricante intimo estrechante x30ML.png" alt="Lubricante Estrechante 30ml">
+<div class="tag">
+💎 ESTRECHANTE
 </div>
 
-<h3>Lubricante Estrechante 30ml</h3>
+<div class="img">
 
-<div class="old">$38.900</div>
-<div class="price">$36.900</div>
+<img
+src="Lubricante intimo estrechante x30ML.png"
+alt="Lubricante Estrechante 30ml">
+
+</div>
+
+<h3>
+Lubricante Estrechante 30ml
+</h3>
+
+<div class="old">
+$38.900
+</div>
+
+<div class="price">
+$36.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Sensación intensa
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20el%20Lubricante%20Estrechante%2030ml" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Estrechante 30ml"
+data-precio="36900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Estrechante 30ml"
+data-precio="36900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 57 -->
 
 <div class="card">
 
-<div class="tag">🍬 GUMMIES</div>
-
-<div class="img">
-<img src="Comestibles Gummies Vi King.png" alt="Gummies Vi King">
+<div class="tag">
+🍬 GUMMIES
 </div>
 
-<h3>Gummies Vi King</h3>
+<div class="img">
 
-<div class="old">$34.900</div>
-<div class="price">$30.900</div>
+<img
+src="Comestibles Gummies Vi King.png"
+alt="Gummies Vi King">
+
+</div>
+
+<h3>
+Gummies Vi King
+</h3>
+
+<div class="old">
+$34.900
+</div>
+
+<div class="price">
+$30.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Novedad
 </p>
 
-<a href="https://wa.me/573507305584?text=Hola%20quiero%20los%20Gummies%20Vi%20King" target="_blank">
-<button>🔥 Pedir ahora</button>
-</a>
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Gummies Vi King"
+data-precio="30900">
+
+🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Gummies Vi King"
+data-precio="30900">
+
+⚡ Comprar ahora
+
+</button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 58 -->
 
 <div class="card">
 
-<div class="tag">🔥 NUEVO</div>
-
-<div class="img">
-<img src="Bala dolphine Vibe.png" alt="Bala Dolphine Vibe" onclick="ampliarImagen(this.src)">
+<div class="tag">
+🔥 NUEVO
 </div>
 
-<h3>Bala Dolphine Vibe</h3>
+<div class="img">
 
-<div class="price">$19.900</div>
+<img
+src="Bala dolphine Vibe.png"
+alt="Bala Dolphine Vibe">
+
+</div>
+
+<h3>
+Bala Dolphine Vibe
+</h3>
+
+<div class="price">
+$19.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 ✨ Vibración potente
 </p>
 
-<button onclick="agregarCarrito('Bala Dolphine Vibe',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Bala Dolphine Vibe"
+data-precio="19900">
+
 🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Bala Dolphine Vibe"
+data-precio="19900">
+
+⚡ Comprar ahora
+
 </button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 59 -->
 
 <div class="card">
 
-<div class="tag">🔥 NUEVO</div>
-
-<div class="img">
-<img src="Bolas chinas x 6 corazon silicona medica.png" alt="Bolas Chinas x6" onclick="ampliarImagen(this.src)">
+<div class="tag">
+🔥 NUEVO
 </div>
 
-<h3>Bolas Chinas x6 Corazón Silicona Medica</h3>
+<div class="img">
 
-<div class="price">$29.000</div>
+<img
+src="Bolas chinas x 6 corazon silicona medica.png"
+alt="Bolas Chinas x6">
+
+</div>
+
+<h3>
+Bolas Chinas x6 Corazón Silicona Medica
+</h3>
+
+<div class="price">
+$29.000
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 💖 Silicona medica
 </p>
 
-<button onclick="agregarCarrito('Bolas Chinas x6 Corazon',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Bolas Chinas x6 Corazon"
+data-precio="29000">
+
 🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Bolas Chinas x6 Corazon"
+data-precio="29000">
+
+⚡ Comprar ahora
+
 </button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 60 -->
 
 <div class="card">
 
-<div class="tag">✨ CUIDADO</div>
-
-<div class="img">
-<img src="Despigmentante intimo.png" alt="Despigmentante intimo" onclick="ampliarImagen(this.src)">
+<div class="tag">
+✨ CUIDADO
 </div>
 
-<h3>Despigmentante intimo</h3>
+<div class="img">
 
-<div class="price">$49.900</div>
+<img
+src="Despigmentante intimo.png"
+alt="Despigmentante intimo">
+
+</div>
+
+<h3>
+Despigmentante intimo
+</h3>
+
+<div class="price">
+$49.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 ✨ Uso íntimo
 </p>
 
-<button onclick="agregarCarrito('Despigmentante intimo',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Despigmentante intimo"
+data-precio="49900">
+
 🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Despigmentante intimo"
+data-precio="49900">
+
+⚡ Comprar ahora
+
 </button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 61 -->
 
 <div class="card">
 
-<div class="tag">💧 LUBRICANTE</div>
-
-<div class="img">
-<img src="Lubricante intimo neutro sen x7ml.png" alt="Lubricante Íntimo Neutro" onclick="ampliarImagen(this.src)">
+<div class="tag">
+💧 LUBRICANTE
 </div>
 
-<h3>Lubricante Íntimo Neutro Sen x7ml</h3>
+<div class="img">
 
-<div class="price">$7.000</div>
+<img
+src="Lubricante intimo neutro sen x7ml.png"
+alt="Lubricante Íntimo Neutro">
+
+</div>
+
+<h3>
+Lubricante Íntimo Neutro Sen x7ml
+</h3>
+
+<div class="price">
+$7.000
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 💧 Base agua
 </p>
 
-<button onclick="agregarCarrito('Lubricante Íntimo Neutro Sen x7ml',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Íntimo Neutro Sen x7ml"
+data-precio="7000">
+
 🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Íntimo Neutro Sen x7ml"
+data-precio="7000">
+
+⚡ Comprar ahora
+
 </button>
 
 </div>
+
+</div>
+
 
 <!-- PRODUCTO 62 -->
 
 <div class="card">
 
-<div class="tag">🔥 POWER</div>
-
-<div class="img">
-<img src="Pastillas power sex femenino x 4.png" alt="Power Sex Femenino" onclick="ampliarImagen(this.src)">
+<div class="tag">
+🔥 POWER
 </div>
 
-<h3>Pastillas Power Sex Femenino x4</h3>
+<div class="img">
 
-<div class="price">$8.000</div>
+<img
+src="Pastillas power sex femenino x 4.png"
+alt="Power Sex Femenino">
+
+</div>
+
+<h3>
+Pastillas Power Sex Femenino x4
+</h3>
+
+<div class="price">
+$8.000
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Estimulante femenino
 </p>
 
-<button onclick="agregarCarrito('Pastillas Power Sex Femenino x4',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Pastillas Power Sex Femenino x4"
+data-precio="8000">
+
 🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Pastillas Power Sex Femenino x4"
+data-precio="8000">
+
+⚡ Comprar ahora
+
 </button>
 
 </div>
+
+</div>
+
+
 <!-- PRODUCTO 63 -->
 
 <div class="card">
 
-<div class="tag">🔥 NUEVO</div>
-
-<div class="img">
-<img src="Feromonas Concentradas Women Liquidas.png"
-     alt="Feromonas Concentradas Women Líquidas"
-     onclick="ampliarImagen(this.src)">
+<div class="tag">
+🔥 NUEVO
 </div>
 
-<h3>Feromonas Concentradas Women Líquidas</h3>
+<div class="img">
 
-<div class="price">42.900</div>
+<img
+src="Feromonas Concentradas Women Liquidas.png"
+alt="Feromonas Concentradas Women Líquidas">
+
+</div>
+
+<h3>
+Feromonas Concentradas Women Líquidas
+</h3>
+
+<div class="price">
+$42.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 ✨ Presentación líquida
 </p>
 
-<button onclick="agregarCarrito('Feromonas Concentradas Women Líquidas',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Feromonas Concentradas Women Líquidas"
+data-precio="42900">
+
 🛒 Agregar al carrito
+
 </button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Feromonas Concentradas Women Líquidas"
+data-precio="42900">
+
+⚡ Comprar ahora
+
+</button>
+
+</div>
 
 </div>
 
@@ -2039,25 +4631,51 @@ onclick="ampliarImagen(this.src)">
 
 <div class="card">
 
-<div class="tag">🍏 SABORIZADO</div>
-
-<div class="img">
-<img src="Gel intimo Saborizado Manzana Verde Elixir 15ml.png"
-     alt="Gel Íntimo Saborizado Manzana Verde Elixir 15ml"
-     onclick="ampliarImagen(this.src)">
+<div class="tag">
+🍏 SABORIZADO
 </div>
 
-<h3>Gel Íntimo Saborizado Manzana Verde Elixir 15ml</h3>
+<div class="img">
 
-<div class="price">16.900</div>
+<img
+src="Gel intimo Saborizado Manzana Verde Elixir 15ml.png"
+alt="Gel Íntimo Saborizado Manzana Verde Elixir 15ml">
+
+</div>
+
+<h3>
+Gel Íntimo Saborizado Manzana Verde Elixir 15ml
+</h3>
+
+<div class="price">
+$16.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🍏 Sabor manzana verde
 </p>
 
-<button onclick="agregarCarrito('Gel Íntimo Saborizado Manzana Verde Elixir 15ml',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Gel Íntimo Saborizado Manzana Verde Elixir 15ml"
+data-precio="16900">
+
 🛒 Agregar al carrito
+
 </button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Gel Íntimo Saborizado Manzana Verde Elixir 15ml"
+data-precio="16900">
+
+⚡ Comprar ahora
+
+</button>
+
+</div>
 
 </div>
 
@@ -2066,25 +4684,51 @@ onclick="ampliarImagen(this.src)">
 
 <div class="card">
 
-<div class="tag">🌿 NATURAL</div>
-
-<div class="img">
-<img src="Gel Lubricante Intimo Natural Elixir x 50ml.png"
-     alt="Gel Lubricante Íntimo Natural Elixir 50ml"
-     onclick="ampliarImagen(this.src)">
+<div class="tag">
+🌿 NATURAL
 </div>
 
-<h3>Gel Lubricante Íntimo Natural Elixir x 50ml</h3>
+<div class="img">
 
-<div class="price">21.800</div>
+<img
+src="Gel Lubricante Intimo Natural Elixir x 50ml.png"
+alt="Gel Lubricante Íntimo Natural Elixir 50ml">
+
+</div>
+
+<h3>
+Gel Lubricante Íntimo Natural Elixir x 50ml
+</h3>
+
+<div class="price">
+$21.800
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🌿 Fórmula natural
 </p>
 
-<button onclick="agregarCarrito('Gel Lubricante Íntimo Natural Elixir x 50ml',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Gel Lubricante Íntimo Natural Elixir x 50ml"
+data-precio="21800">
+
 🛒 Agregar al carrito
+
 </button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Gel Lubricante Íntimo Natural Elixir x 50ml"
+data-precio="21800">
+
+⚡ Comprar ahora
+
+</button>
+
+</div>
 
 </div>
 
@@ -2093,25 +4737,51 @@ onclick="ampliarImagen(this.src)">
 
 <div class="card">
 
-<div class="tag">🔥 10 FUNCIONES</div>
-
-<div class="img">
-<img src="Huevo Inalambrico Genny 10 Funciones.png"
-     alt="Huevo Inalámbrico Genny 10 Funciones"
-     onclick="ampliarImagen(this.src)">
+<div class="tag">
+🔥 10 FUNCIONES
 </div>
 
-<h3>Huevo Inalámbrico Genny 10 Funciones</h3>
+<div class="img">
 
-<div class="price">59.900</div>
+<img
+src="Huevo Inalambrico Genny 10 Funciones.png"
+alt="Huevo Inalámbrico Genny 10 Funciones">
+
+</div>
+
+<h3>
+Huevo Inalámbrico Genny 10 Funciones
+</h3>
+
+<div class="price">
+$59.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 ⚡ 10 funciones
 </p>
 
-<button onclick="agregarCarrito('Huevo Inalámbrico Genny 10 Funciones',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Huevo Inalámbrico Genny 10 Funciones"
+data-precio="59900">
+
 🛒 Agregar al carrito
+
 </button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Huevo Inalámbrico Genny 10 Funciones"
+data-precio="59900">
+
+⚡ Comprar ahora
+
+</button>
+
+</div>
 
 </div>
 
@@ -2120,25 +4790,51 @@ onclick="ampliarImagen(this.src)">
 
 <div class="card">
 
-<div class="tag">🔥 BONDAGE</div>
-
-<div class="img">
-<img src="Latigo Bondage.png"
-     alt="Látigo Bondage"
-     onclick="ampliarImagen(this.src)">
+<div class="tag">
+🔥 BONDAGE
 </div>
 
-<h3>Látigo Bondage</h3>
+<div class="img">
 
-<div class="price">15.900</div>
+<img
+src="Latigo Bondage.png"
+alt="Látigo Bondage">
+
+</div>
+
+<h3>
+Látigo Bondage
+</h3>
+
+<div class="price">
+$15.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Accesorio
 </p>
 
-<button onclick="agregarCarrito('Látigo Bondage',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Látigo Bondage"
+data-precio="15900">
+
 🛒 Agregar al carrito
+
 </button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Látigo Bondage"
+data-precio="15900">
+
+⚡ Comprar ahora
+
+</button>
+
+</div>
 
 </div>
 
@@ -2147,25 +4843,51 @@ onclick="ampliarImagen(this.src)">
 
 <div class="card">
 
-<div class="tag">💧 ÍNTIMO</div>
-
-<div class="img">
-<img src="Lubricante intimo estrechante x10ml.png"
-     alt="Lubricante Íntimo Estrechante x10ml"
-     onclick="ampliarImagen(this.src)">
+<div class="tag">
+💧 ÍNTIMO
 </div>
 
-<h3>Lubricante Íntimo Estrechante x10ml</h3>
+<div class="img">
 
-<div class="price">25.000</div>
+<img
+src="Lubricante intimo estrechante x10ml.png"
+alt="Lubricante Íntimo Estrechante x10ml">
+
+</div>
+
+<h3>
+Lubricante Íntimo Estrechante x10ml
+</h3>
+
+<div class="price">
+$25.000
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 ✨ Presentación 10ml
 </p>
 
-<button onclick="agregarCarrito('Lubricante Íntimo Estrechante x10ml',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante Íntimo Estrechante x10ml"
+data-precio="25000">
+
 🛒 Agregar al carrito
+
 </button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante Íntimo Estrechante x10ml"
+data-precio="25000">
+
+⚡ Comprar ahora
+
+</button>
+
+</div>
 
 </div>
 
@@ -2174,176 +4896,172 @@ onclick="ampliarImagen(this.src)">
 
 <div class="card">
 
-<div class="tag">🔥 CALIENTE</div>
-
-<div class="img">
-<img src="Lubricante caramelo X 30ML.png"
-     alt="Lubricante caramelo 30ml"
-     onclick="ampliarImagen(this.src)">
+<div class="tag">
+🔥 CALIENTE
 </div>
 
-<h3>Lubricante caramelo x30ml</h3>
+<div class="img">
 
-<div class="price">25.900</div>
+<img
+src="Lubricante caramelo X 30ML.png"
+alt="Lubricante caramelo 30ml">
+
+</div>
+
+<h3>
+Lubricante caramelo x30ml
+</h3>
+
+<div class="price">
+$25.900
+</div>
 
 <p style="color:#ff4fd8;font-size:13px;">
 🔥 Efecto caliente
 </p>
 
-<button onclick="agregarCarrito('Lubricante caramelo x30ml',0)">
+<div class="product-actions">
+
+<button
+onclick="agregarCarritoDesdeBoton(this)"
+data-nombre="Lubricante caramelo x30ml"
+data-precio="25900">
+
 🛒 Agregar al carrito
+
+</button>
+
+<button
+onclick="comprarAhora(this)"
+data-nombre="Lubricante caramelo x30ml"
+data-precio="25900">
+
+⚡ Comprar ahora
+
 </button>
 
 </div>
 
-</div></div>
+</div>
 
-<div class="payments"></div>
+
+</div>
+
+
+<!-- PAGOS -->
 
 <div class="payments">
 
-<h2>💳 Métodos de pago</h2>
+<h2>
+💳 Métodos de pago
+</h2>
 
 <p>
-📲 Nequi: <strong>3123048237</strong><br>
-📲 Daviplata: <strong>3123048237</strong><br><br>
+
+📲 Nequi:
+<strong>3123048237</strong>
+
+<br>
+
+📲 Daviplata:
+<strong>3123048237</strong>
+
+<br><br>
+
 ✔ Pago contra entrega en Cali
+
 </p>
 
 </div>
 
+
+<!-- ASESOR -->
+
 <div class="asesor">
 
-<h2>📲 Asesor Principal</h2>
+<h2>
+📲 Asesor Principal
+</h2>
 
-<p style="font-size:22px;color:#25d366;font-weight:bold;">
+<p
+style="font-size:22px;color:#25d366;font-weight:bold;">
+
 3507305584
+
 </p>
 
 <p>
+
 Atención personalizada por WhatsApp<br>
+
 Pedidos rápidos y discretos 🔥
+
 </p>
 
-<a href="https://wa.me/573507305584" target="_blank">
+<a
+href="https://wa.me/573507305584"
+target="_blank"
+rel="noopener">
 
-<button style="max-width:300px;">
+<button
+style="max-width:300px;">
+
 💬 Hablar con asesor
+
 </button>
 
 </a>
 
 </div>
 
-<div style="text-align:center;padding:20px;">
 
-<h2>⭐ Opiniones de clientes</h2>
+<!-- OPINIONES -->
 
-<p>"Muy discreto y rápido 🔥" - Cliente Cali</p>
+<div
+style="text-align:center;padding:20px;">
 
-<p>"Llegó el mismo día, recomendado" - Andrés</p>
+<h2>
+⭐ Opiniones de clientes
+</h2>
+
+<p>
+" Muy discreto y rápido 🔥 " - Cliente Cali
+</p>
+
+<p>
+" Llegó el mismo día, recomendado " - Andrés
+</p>
 
 </div>
+
+
+<!-- FOOTER -->
 
 <footer>
 
 © 2026 EntreNosotros Sexshop Cali
+
 <br>
+
 Solo mayores de 18 años
 
 </footer>
 
-<a class="whatsapp" href="https://wa.me/573507305584">
+
+<!-- WHATSAPP -->
+
+<a
+class="whatsapp"
+href="https://wa.me/573507305584"
+target="_blank"
+rel="noopener"
+aria-label="Contactar por WhatsApp">
+
 💬
+
 </a>
-<script>
-(function () {
-  const WA_NUMBER = "573507305584";
 
-  function parsePriceToNumber(txt) {
-    if (!txt) return 0;
-    // Ej: "$59.900" -> 59900
-    const cleaned = String(txt).replace(/[^\d]/g, '');
-    const n = parseInt(cleaned || '0', 10);
-    return Number.isFinite(n) ? n : 0;
-  }
 
-  function safeText(txt) {
-    return String(txt || '').trim();
-  }
-
-  function buildBtn(label, onClick, className) {
-    const b = document.createElement('button');
-    b.type = "button";
-    b.className = className || "";
-    b.textContent = label;
-    b.addEventListener('click', onClick);
-    return b;
-  }
-
-  function addActionsToCards() {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-      // Evitar duplicar si ya se añadieron
-      if (card.querySelector('[data-auto-actions="1"]')) return;
-
-      const nameEl = card.querySelector('h3');
-      const priceEl = card.querySelector('.price');
-      const name = safeText(nameEl ? nameEl.textContent : '');
-      const price = parsePriceToNumber(priceEl ? priceEl.textContent : '');
-
-      if (!name) return;
-
-      // Contenedor de acciones
-      const actions = document.createElement('div');
-      actions.dataset.autoActions = "1";
-
-      actions.style.marginTop = "12px";
-
-      // Botón Agregar
-      const btnAdd = buildBtn(
-        "🛒 Agregar al carrito",
-        () => {
-          // usa tu función existente
-          if (typeof agregarCarrito === 'function') {
-            agregarCarrito(name, price);
-          } else {
-            alert("La función agregarCarrito no está definida.");
-          }
-        },
-        ""
-      );
-
-      // Botón Comprar ahora (WhatsApp)
-      const btnBuy = buildBtn(
-        "⚡ Comprar ahora",
-        () => {
-          const msg =
-            `Hola, quiero el: ${name}` +
-            (price > 0 ? ` - $${price.toLocaleString('es-CO')}` : '') +
-            `%0A%0AEntrega discreta - Cali`;
-
-          window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, "_blank");
-        },
-        ""
-      );
-
-      // Alineación: por defecto apilado; si luego me dices O2 lo ajusto
-      actions.appendChild(btnAdd);
-      actions.appendChild(btnBuy);
-
-      card.appendChild(actions);
-    });
-  }
-
-  // Espera DOM listo
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", addActionsToCards);
-  } else {
-    addActionsToCards();
-  }
-})();
-</script>
 </body>
-
-</html>  
+</html>
+```
